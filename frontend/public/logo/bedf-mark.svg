@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7E7A9"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#9E7C17"/>
+    </linearGradient>
+    <linearGradient id="navyStem" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1D4E89"/>
+      <stop offset="100%" stop-color="#071A33"/>
+    </linearGradient>
+  </defs>
+  <!-- Bastion Stacked Blocks Stem -->
+  <!-- Base block -->
+  <rect x="14" y="68" width="16" height="18" rx="2" fill="url(#navyStem)" />
+  <!-- Second block -->
+  <rect x="14" y="47" width="16" height="18" rx="2" fill="url(#navyStem)" />
+  <!-- Third block -->
+  <rect x="14" y="26" width="16" height="18" rx="2" fill="url(#navyStem)" />
+  <!-- Top Gold Crown Bastion Block -->
+  <rect x="14" y="14" width="16" height="9" rx="2" fill="url(#goldGradient)" />
+  
+  <!-- Upper Loop of B (Precision Aero Arch) -->
+  <path d="M30 18 H58 C72 18, 80 27, 80 38 C80 49, 72 55, 58 55 H30 Z" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round"/>
+  
+  <!-- Lower Loop of B (Expansive Foundation Arch) -->
+  <path d="M30 49 H63 C78 49, 87 59, 87 71 C87 83, 77 86, 61 86 H30 Z" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round"/>
+  
+  <!-- Subtle Bastion Chevron Accent -->
+  <circle cx="58" cy="38" r="4" fill="url(#goldGradient)"/>
+  <circle cx="63" cy="71" r="5" fill="url(#goldGradient)"/>
+</svg>

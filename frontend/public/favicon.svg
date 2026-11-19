@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="favGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE88F"/>
+      <stop offset="60%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#9E7C17"/>
+    </linearGradient>
+    <linearGradient id="favBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B2D5B"/>
+      <stop offset="100%" stop-color="#071A33"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#favBg)"/>
+  <!-- Bastion stem blocks -->
+  <rect x="12" y="44" width="10" height="11" rx="1.5" fill="#3B82F6"/>
+  <rect x="12" y="30" width="10" height="11" rx="1.5" fill="#3B82F6"/>
+  <rect x="12" y="16" width="10" height="11" rx="1.5" fill="#3B82F6"/>
+  <rect x="12" y="8" width="10" height="6" rx="1.5" fill="url(#favGold)"/>
+  <!-- B Arches -->
+  <path d="M22 12 H37 C46 12, 51 17, 51 24 C51 31, 46 34, 37 34 H22" fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M22 32 H40 C49 32, 54 37, 54 45 C54 52, 47 55, 38 55 H22" fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+  <circle cx="37" cy="23" r="2.5" fill="url(#favGold)"/>
+  <circle cx="39" cy="44" r="2.5" fill="url(#favGold)"/>
+</svg>
