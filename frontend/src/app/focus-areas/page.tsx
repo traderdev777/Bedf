@@ -46,11 +46,11 @@ export default function FocusAreasPage() {
             <span>{t('Strategic Pillars', 'ಕಾರ್ಯತಂತ್ರದ ಸ್ತಂಭಗಳು')}</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-navy-950 dark:text-white tracking-tight leading-tight">
+          <h1 className="text-h2-fluid font-display font-black text-navy-950 dark:text-white">
             {t('Strategic Focus Areas', 'ಪ್ರಮುಖ ಕಾರ್ಯಕ್ಷೇತ್ರಗಳು')}
           </h1>
 
-          <p className="text-base sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+          <p className="font-sans text-lead-fluid text-gray-600 dark:text-gray-300">
             {t(
               'Belagavi’s transformation into a multi-sector economic powerhouse is driven by seven specialized domains combining engineering heritage with future technologies.',
               'ಎಂಜಿನಿಯರಿಂಗ್ ಪರಂಪರೆ ಮತ್ತು ಭವಿಷ್ಯದ ತಂತ್ರಜ್ಞಾನಗಳನ್ನು ಮೇಳೈಸಿದ ಏಳು ನಿರ್ದಿಷ್ಟ ಕಾರ್ಯಕ್ಷೇತ್ರಗಳು ಬೆಳಗಾವಿಯ ಆರ್ಥಿಕ ಬೆಳವಣಿಗೆಯನ್ನು ಮುನ್ನಡೆಸುತ್ತಿವೆ.'

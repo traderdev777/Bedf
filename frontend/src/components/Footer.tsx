@@ -237,6 +237,9 @@ export default function Footer() {
             <span className="text-gray-400">
               Belagavi: 15.8497° N, 74.4977° E • Elev: 762m
             </span>
+            <Link href="/credits" className="hover:text-gold-400 transition-colors text-gray-300 font-semibold">
+              {t('Photo Credits & Attribution', 'ಚಿತ್ರಗಳ ಕೃತಜ್ಞತೆಗಳು')}
+            </Link>
             <Link href="/privacy" className="hover:text-gray-300 transition-colors">
               {t('Privacy Policy', 'ಗೌಪ್ಯತೆ ನೀತಿ')}
             </Link>

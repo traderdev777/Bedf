@@ -45,11 +45,11 @@ export default function InsightsPage() {
             <span>{t('Knowledge & Intelligence Centre', 'ಜ್ಞಾನ ಮತ್ತು ಸಂಶೋಧನಾ ಕೇಂದ್ರ')}</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-navy-950 dark:text-white tracking-tight leading-tight">
+          <h1 className="text-h2-fluid font-display font-black text-navy-950 dark:text-white">
             {t('Research & Insights', 'ಸಂಶೋಧನೆ ಮತ್ತು ವರದಿಗಳು')}
           </h1>
 
-          <p className="text-base sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+          <p className="font-sans text-lead-fluid text-gray-600 dark:text-gray-300">
             {t(
               'Evidence-based empirical whitepapers, regional cluster studies, and policy recommendation briefs addressing Belagavi’s manufacturing, logistics, and innovation trajectory.',
               'ಬೆಳಗಾವಿಯ ಉತ್ಪಾದನೆ, ಲಾಜಿಸ್ಟಿಕ್ಸ್ ಮತ್ತು ನಾವೀನ್ಯತೆ ಕುರಿತಾದ ನಿಖರ ಶ್ವೇತಪತ್ರಗಳು ಮತ್ತು ನೀತಿ ಶಿಫಾರಸು ವರದಿಗಳು.'

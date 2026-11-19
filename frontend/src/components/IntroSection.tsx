@@ -114,28 +114,28 @@ export default function IntroSection() {
             </ScrollReveal>
           </div>
 
-          {/* Right Column: 3D Tilt Card with Belagavi Landmark Artwork */}
+          {/* Right Column: 3D Tilt Card with Authentic Belagavi Landmark Photography & Asymmetric Storytelling */}
           <div className="lg:col-span-6 relative">
             <TiltCard maxTilt={5}>
-              <div className="relative rounded-3xl overflow-hidden border border-gray-200 dark:border-navy-700 shadow-2xl aspect-[4/3] group">
+              <div className="relative rounded-3xl overflow-hidden border border-gray-200 dark:border-navy-700 shadow-2xl aspect-[4/3] group bg-navy-950">
                 <Image
-                  src="/images/suvarna_vidhana_soudha.svg"
-                  alt="Belagavi Suvarna Vidhana Soudha Landmark"
+                  src="/images/suvarna_vidhana_soudha.jpg"
+                  alt="Belagavi Suvarna Vidhana Soudha — Authentic Institutional Photograph"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/20 to-transparent" />
 
                 {/* Floating Verified Fact Badge */}
                 <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/95 dark:bg-navy-900/95 backdrop-blur-md border border-gray-200 dark:border-navy-700 shadow-lg flex items-center justify-between gap-4">
                   <div>
-                    <span className="text-[10px] uppercase font-bold tracking-widest text-gold-600 dark:text-gold-400 block">
+                    <span className="font-display text-[10px] uppercase font-bold tracking-widest text-gold-600 dark:text-gold-400 block">
                       {t('Regional Benchmark', 'ಪ್ರಾದೇಶಿಕ ಹೆಗ್ಗುರುತು')}
                     </span>
-                    <span className="text-sm font-extrabold text-navy-950 dark:text-white">
+                    <span className="font-display text-sm font-extrabold text-navy-950 dark:text-white">
                       Suvarna Vidhana Soudha, Belagavi
                     </span>
-                    <span className="block text-[11px] text-gray-500 dark:text-gray-400">
+                    <span className="font-sans block text-[11px] text-gray-500 dark:text-gray-400">
                       {t('Symbol of North Karnataka’s legislative and administrative empowerment', 'ಉತ್ತರ ಕರ್ನಾಟಕದ ಆಡಳಿತ ಮತ್ತು ಶಾಸಕಾಂಗ ಶಕ್ತಿಯ ಸಂಕೇತ')}
                     </span>
                   </div>
@@ -146,6 +146,32 @@ export default function IntroSection() {
                 </div>
               </div>
             </TiltCard>
+
+            {/* Asymmetric Floating Secondary Photographic Accent: Rani Chennamma Circle */}
+            <motion.div
+              initial={{ opacity: 0, x: 20, y: 20 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, duration: 0.6, ease: PREMIUM_EASE }}
+              className="hidden sm:flex items-center gap-3 absolute -bottom-6 -left-6 p-3 pr-4 rounded-2xl bg-white/95 dark:bg-navy-900/95 backdrop-blur-md border border-gray-200 dark:border-navy-700 shadow-xl z-20 group hover:border-gold-500/60 transition-colors"
+            >
+              <div className="relative w-12 h-12 rounded-xl overflow-hidden flex-shrink-0 border border-gray-200 dark:border-navy-700">
+                <Image
+                  src="/images/chennamma_circle.jpg"
+                  alt="Chennamma Circle Belagavi"
+                  fill
+                  className="object-cover group-hover:scale-115 transition-transform duration-500"
+                />
+              </div>
+              <div className="text-left">
+                <span className="font-display block text-xs font-bold text-navy-950 dark:text-white">
+                  Rani Chennamma Circle
+                </span>
+                <span className="font-sans block text-[10px] text-gray-500 dark:text-gray-400">
+                  {t('Civic Tri-Junction • Belagavi City', 'ನಗರದ ಹೃದಯಭಾಗ • ಬೆಳಗಾವಿ')}
+                </span>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>

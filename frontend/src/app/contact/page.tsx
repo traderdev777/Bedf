@@ -216,11 +216,11 @@ export default function ContactPage() {
             <span>{t('Foundation Liaison Desk', 'ಸಂಪರ್ಕ ಕೇಂದ್ರ')}</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-navy-950 dark:text-white tracking-tight leading-tight">
+          <h1 className="text-h2-fluid font-display font-black text-navy-950 dark:text-white">
             {t('Connect With BEDF', 'ಬಿಇಡಿಎಫ್ ಸಂಪರ್ಕಿಸಿ')}
           </h1>
 
-          <p className="text-base sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+          <p className="font-sans text-lead-fluid text-gray-600 dark:text-gray-300">
             {t(
               'For investment enquiries, partnerships, membership, volunteering, research and regional development initiatives, contact our team.',
               'ಹೂಡಿಕೆ ವಿಚಾರಣೆಗಳು, ಪಾಲುದಾರಿಕೆ, ಸದಸ್ಯತ್ವ, ಸ್ವಯಂಸೇವಕ ನೆಟ್‌ವರ್ಕ್ ಮತ್ತು ಸಂಶೋಧನಾ ಕಾರ್ಯಕ್ರಮಗಳಿಗಾಗಿ ನಮ್ಮ ತಂಡವನ್ನು ಸಂಪರ್ಕಿಸಿ.'

@@ -37,11 +37,11 @@ export default function InitiativesPage() {
             <span>{t('Action Programmes & Roadmaps', 'ಅಭಿವೃದ್ಧಿ ಯೋಜನೆಗಳು')}</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-navy-950 dark:text-white tracking-tight leading-tight">
+          <h1 className="text-h2-fluid font-display font-black text-navy-950 dark:text-white">
             {t('Foundation Initiatives', 'ಪ್ರತಿಷ್ಠಾನದ ಉಪಕ್ರಮಗಳು')}
           </h1>
 
-          <p className="text-base sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+          <p className="font-sans text-lead-fluid text-gray-600 dark:text-gray-300">
             {t(
               'Explore our 7 structured programmes turning regional ambition into measurable economic outcomes. Every initiative features verified progress updates and citizen participation pathways.',
               'ಪ್ರಾದೇಶಿಕ ಮಹತ್ವಾಕಾಂಕ್ಷೆಯನ್ನು ನೈಜ ಆರ್ಥಿಕ ಫಲಿತಾಂಶಗಳನ್ನಾಗಿ ಪರಿವರ್ತಿಸುವ 7 ಪ್ರಮುಖ ಉಪಕ್ರಮಗಳು. ಪ್ರತಿಯೊಂದು ಯೋಜನೆಯು ಪಾರದರ್ಶಕ ಪ್ರಗತಿ ವಿವರ ಮತ್ತು ಸಾರ್ವಜನಿಕ ಸಹಭಾಗಿತ್ವವನ್ನು ಒಳಗೊಂಡಿದೆ.'

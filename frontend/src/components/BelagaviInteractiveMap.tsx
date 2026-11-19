@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
 import { 
@@ -35,6 +36,15 @@ import {
   Info
 } from 'lucide-react';
 import { PREMIUM_EASE } from '@/components/motion/MotionSystem';
+
+const LOCATION_PHOTOS: Record<string, string> = {
+  'suvarna-vidhana-soudha': '/images/suvarna_vidhana_soudha.jpg',
+  'belagavi-airport': '/images/belagavi_airport.jpg',
+  'vtu-headquarters': '/images/vtu_campus.jpg',
+  'gokak-falls-hydro': '/images/gokak_falls.jpg',
+  'kittur-heritage': '/images/kittur_fort.jpg',
+  'kamal-basti-fort': '/images/kamal_basti.jpg',
+};
 
 export default function BelagaviInteractiveMap() {
   const { t, language } = useLanguage();
@@ -539,6 +549,22 @@ export default function BelagaviInteractiveMap() {
                     </span>
                   )}
                 </div>
+
+                {/* Authentic Landmark Photograph Preview (if available) */}
+                {LOCATION_PHOTOS[selectedLocation.id] && (
+                  <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden border border-gray-200 dark:border-navy-700 shadow-md bg-navy-950 group">
+                    <Image
+                      src={LOCATION_PHOTOS[selectedLocation.id]}
+                      alt={selectedLocation.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute bottom-2 left-3 px-2 py-0.5 rounded-full bg-navy-950/85 backdrop-blur-sm text-[9px] font-bold text-gold-400 uppercase tracking-wider border border-white/10">
+                      Authentic Belagavi Landmark
+                    </div>
+                  </div>
+                )}
 
                 {/* Location Title */}
                 <div>

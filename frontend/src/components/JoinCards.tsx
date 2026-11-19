@@ -72,11 +72,11 @@ export default function JoinCards() {
             <span>{t('Join the BEDF Network', 'ಬಿಇಡಿಎಫ್ ಜಾಲಕ್ಕೆ ಸೇರಿ')}</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy-950 dark:text-white tracking-tight">
+          <h2 className="text-h2-fluid font-display font-black text-navy-950 dark:text-white">
             {t('Be Part of the Growth Story', 'ಬೆಳವಣಿಗೆಯ ಪಯಣದಲ್ಲಿ ನೀವೂ ಭಾಗಿಗಳಾಗಿ')}
           </h2>
 
-          <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base leading-relaxed">
+          <p className="font-sans text-body-fluid text-gray-600 dark:text-gray-400">
             {t(
               'Whether you are an industry executive, young technologist, or regional institution, your active participation can accelerate Belagavi’s economic ascendancy.',
               'ನೀವು ಉದ್ಯಮಿಯಾಗಿರಲಿ, ಯುವ ತಂತ್ರಜ್ಞರಾಗಿರಲಿ ಅಥವಾ ಶಿಕ್ಷಣ ಸಂಸ್ಥೆಯಾಗಿರಲಿ, ನಿಮ್ಮ ಸಕ್ರಿಯ ಭಾಗವಹಿಸುವಿಕೆ ಬೆಳಗಾವಿಯ ಆರ್ಥಿಕ ಪ್ರಗತಿಯನ್ನು ವೇಗಗೊಳಿಸುತ್ತದೆ.'

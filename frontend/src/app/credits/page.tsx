@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
 import creditsData from '@/data/credits.json';
@@ -45,27 +46,38 @@ export default function CreditsPage() {
           {creditsData.map((asset: any) => (
             <div
               key={asset.key}
-              className="p-6 rounded-2xl bg-gray-50 dark:bg-navy-900 border border-gray-200 dark:border-navy-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+              className="p-6 rounded-2xl bg-gray-50 dark:bg-navy-900 border border-gray-200 dark:border-navy-800 flex flex-col md:flex-row md:items-center justify-between gap-6"
             >
-              <div className="space-y-1">
-                <div className="flex items-center gap-2">
-                  <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-navy-100 dark:bg-navy-800 text-navy-800 dark:text-gray-200">
-                    {asset.category}
-                  </span>
-                  <span className="text-xs text-gray-400">• {asset.filename}</span>
+              <div className="flex items-start gap-4">
+                <div className="relative w-28 h-20 rounded-xl overflow-hidden bg-navy-950 flex-shrink-0 border border-gray-200 dark:border-navy-700 shadow-sm hidden sm:block">
+                  <Image
+                    src={`/images/${asset.filename}`}
+                    alt={asset.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <h3 className="text-base font-bold text-navy-950 dark:text-white">
-                  {asset.title}
-                </h3>
-                <p className="text-xs text-gray-600 dark:text-gray-400 max-w-2xl">
-                  {asset.description}
-                </p>
-                <div className="text-xs text-gray-500 pt-1">
-                  <strong>Author / Source:</strong> {asset.author} • <strong>License:</strong> {asset.license}
+
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <span className="font-display text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-navy-100 dark:bg-navy-800 text-navy-800 dark:text-gray-200">
+                      {asset.category}
+                    </span>
+                    <span className="font-mono text-xs text-gray-400">• {asset.filename}</span>
+                  </div>
+                  <h3 className="font-display text-base font-bold text-navy-950 dark:text-white">
+                    {asset.title}
+                  </h3>
+                  <p className="font-sans text-xs text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed">
+                    {asset.description}
+                  </p>
+                  <div className="font-sans text-xs text-gray-500 pt-1">
+                    <strong>Author / Photographer:</strong> <span className="text-navy-900 dark:text-gray-200 font-medium">{asset.author}</span> • <strong>License:</strong> <span className="font-mono text-gold-600 dark:text-gold-400">{asset.license}</span>
+                  </div>
                 </div>
               </div>
 
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 self-start md:self-center">
                 <a
                   href={asset.source}
                   target="_blank"

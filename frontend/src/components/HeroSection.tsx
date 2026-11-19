@@ -39,23 +39,24 @@ export default function HeroSection() {
         style={{ y: shouldReduceMotion ? 0 : backgroundY }}
         className="absolute inset-0 z-0 pointer-events-none"
       >
+        {/* Real Authentic Belagavi Photograph: Suvarna Vidhana Soudha */}
         <motion.div
           animate={
             shouldReduceMotion
               ? {}
               : {
-                  scale: [1.02, 1.07, 1.02],
+                  scale: [1.02, 1.08, 1.02],
                 }
           }
           transition={{ duration: 24, repeat: Infinity, ease: 'easeInOut' }}
           className="relative w-full h-full"
         >
           <Image
-            src="/images/suvarna_vidhana_soudha.svg"
-            alt="Suvarna Vidhana Soudha Belagavi"
+            src="/images/suvarna_vidhana_soudha.jpg"
+            alt="Suvarna Vidhana Soudha Belagavi — Authentic Institutional Photograph"
             fill
             priority
-            className="object-cover opacity-[0.07] dark:opacity-20 transition-all duration-1000 ease-out"
+            className="object-cover opacity-25 dark:opacity-30 transition-all duration-1000 ease-out scale-105"
           />
         </motion.div>
 
@@ -74,7 +75,8 @@ export default function HeroSection() {
           className="absolute -top-1/4 left-1/3 w-[650px] h-[650px] bg-gradient-to-tr from-gold-500/20 via-amber-500/10 to-transparent rounded-full blur-3xl pointer-events-none"
         />
 
-        {/* Dark theme deep navy vignette overlay */}
+        {/* Cinematic Translucent Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/50 to-white dark:from-navy-950/85 dark:via-navy-950/70 dark:to-navy-950 pointer-events-none" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_40%,_rgba(7,26,51,0.4)_100%)] dark:block hidden" />
       </motion.div>
 
@@ -155,8 +157,8 @@ export default function HeroSection() {
           className="max-w-2xl text-lead-fluid font-sans text-gray-600 dark:text-gray-300 font-normal text-center"
         >
           {t(
-            'Building Belagavi. Empowering North Karnataka. Uniting aerospace, advanced manufacturing, artificial intelligence, and regional entrepreneurship to pioneer the future.',
-            'ಬೆಳಗಾವಿ ನಿರ್ಮಾಣ. ಉತ್ತರ ಕರ್ನಾಟಕದ ಸಬಲೀಕರಣ. ಏರೋಸ್ಪೇಸ್, ಸುಧಾರಿತ ಉತ್ಪಾದನೆ, ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ ಮತ್ತು ಪ್ರಾದೇಶಿಕ ನವೋದ್ಯಮಗಳನ್ನು ಒಗ್ಗೂಡಿಸಿ ಭವಿಷ್ಯ ರೂಪಿಸುವುದು.'
+            'Connecting industry, innovation, investment and people to unlock the potential of Belagavi and North Karnataka.',
+            'ಬೆಳಗಾವಿ ಮತ್ತು ಉತ್ತರ ಕರ್ನಾಟಕದ ಸಾಮರ್ಥ್ಯವನ್ನು ಜಾಗೃತಗೊಳಿಸಲು ಕೈಗಾರಿಕೆ, ನಾವೀನ್ಯತೆ, ಹೂಡಿಕೆ ಮತ್ತು ಜನರನ್ನು ಒಗ್ಗೂಡಿಸುವುದು.'
           )}
         </motion.p>
 

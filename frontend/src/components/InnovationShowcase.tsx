@@ -131,11 +131,11 @@ export default function InnovationShowcase() {
             <span>{t('Future Opportunities for Belagavi', 'ಬೆಳಗಾವಿಯ ಭವಿಷ್ಯದ ಅವಕಾಶಗಳು')}</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy-950 dark:text-white tracking-tight">
+          <h2 className="text-h2-fluid font-display font-black text-navy-950 dark:text-white">
             {t('Imagining the Next Generation of Industry', 'ಮುಂದಿನ ಪೀಳಿಗೆಯ ಕೈಗಾರಿಕೆಯ ಕಲ್ಪನೆ')}
           </h2>
 
-          <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed">
+          <p className="font-sans text-body-fluid text-gray-600 dark:text-gray-300">
             {t(
               'A curated look at technological frontiers well within Belagavi’s reach. Leveraging existing metallurgical excellence and engineering universities to leap into higher-value global industries.',
               'ಬೆಳಗಾವಿಯ ಸಾಮರ್ಥ್ಯಕ್ಕೆ ತಕ್ಕಂತೆ ಸಾಧಿಸಬಹುದಾದ ಭವಿಷ್ಯದ ತಂತ್ರಜ್ಞಾನಗಳ ಚಿತ್ರಣ. ಪ್ರಸ್ತುತ ಫೌಂಡ್ರಿ ಶಕ್ತಿ ಮತ್ತು ತಾಂತ್ರಿಕ ಶಿಕ್ಷಣವನ್ನು ಬಳಸಿಕೊಂಡು ಜಾಗತಿಕ ಮೌಲ್ಯವರ್ಧನೆ ಸಾಧಿಸುವ ಯೋಜನೆಗಳು.'

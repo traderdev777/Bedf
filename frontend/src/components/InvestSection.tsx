@@ -65,11 +65,11 @@ export default function InvestSection() {
             <span>{t('Invest in Belagavi', 'ಬೆಳಗಾವಿಯಲ್ಲಿ ಹೂಡಿಕೆ ಮಾಡಿ')}</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy-950 dark:text-white tracking-tight">
+          <h2 className="text-h2-fluid font-display font-black text-navy-950 dark:text-white">
             {t('Your Next Opportunity Starts Here', 'ನಿಮ್ಮ ಮುಂದಿನ ಮಹತ್ವದ ಅವಕಾಶ ಇಲ್ಲಿದೆ')}
           </h2>
 
-          <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+          <p className="font-sans text-lead-fluid text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             {t(
               'Strategically located at the intersection of Karnataka, Maharashtra, and Goa with superior logistics, dependable engineering talent, and proven industrial mastery.',
               'ಕರ್ನಾಟಕ, ಮಹಾರಾಷ್ಟ್ರ ಮತ್ತು ಗೋವಾ ರಾಜ್ಯಗಳ ಸಂಗಮದಲ್ಲಿರುವ ಬೆಳಗಾವಿಯು ಅತ್ಯುತ್ತಮ ಸರಕು ಸಂಪರ್ಕ ಮತ್ತು ನುರಿತ ಎಂಜಿನಿಯರಿಂಗ್ ಪ್ರತಿಭೆಯನ್ನು ಹೊಂದಿದೆ.'

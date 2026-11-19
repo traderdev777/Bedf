@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
 import BelagaviInteractiveMap from '@/components/BelagaviInteractiveMap';
 import { BELAGAVI_FACTS } from '@/data/bedfContent';
+import { BELAGAVI_IMAGE_ATTRIBUTIONS } from '@/data/attributions';
+import { TiltCard } from '@/components/motion/MotionSystem';
 import { 
   Compass, 
   MapPin, 
@@ -18,56 +20,12 @@ import {
   Building2, 
   ShieldCheck,
   CheckCircle2,
-  ExternalLink
+  ExternalLink,
+  Camera
 } from 'lucide-react';
 
 export default function DiscoverBelagaviPage() {
   const { t, language } = useLanguage();
-
-  const landmarkGallery = [
-    {
-      title: "Suvarna Vidhana Soudha",
-      title_kn: "ಸುವರ್ಣ ವಿಧಾನ ಸೌಧ",
-      category: "Legislative Governance",
-      img: "/images/suvarna_vidhana_soudha.svg",
-      desc: "Hosts the annual winter session of the Karnataka Legislature."
-    },
-    {
-      title: "VTU Jnana Sangama Campus",
-      title_kn: "ವಿಟಿಯು ಜ್ಞಾನ ಸಂಗಮ",
-      category: "Apex Engineering University",
-      img: "/images/vtu_campus.svg",
-      desc: "Directs 200+ engineering institutions statewide."
-    },
-    {
-      title: "Belagavi Airport (Sambra IXG)",
-      title_kn: "ಬೆಳಗಾವಿ ವಿಮಾನ ನಿಲ್ದಾಣ",
-      category: "Aviation & Logistics",
-      img: "/images/belagavi_airport.svg",
-      desc: "2,300m runway connecting to Bengaluru, Mumbai, Delhi and Hyderabad."
-    },
-    {
-      title: "Gokak Falls & Historic Hydro",
-      title_kn: "ಗೋಕಾಕ ಜಲಪಾತ",
-      category: "Natural & Clean Energy",
-      img: "/images/gokak_falls.svg",
-      desc: "Historic 52m waterfall and 1887 hydroelectric generation site."
-    },
-    {
-      title: "Kittur Rani Chennamma Fort",
-      title_kn: "ಕಿತ್ತೂರು ಕೋಟೆ",
-      category: "Historic Citadel",
-      img: "/images/kittur_fort.svg",
-      desc: "Citadel of Rani Chennamma's armed resistance in 1824."
-    },
-    {
-      title: "Kamal Basti (1204 AD)",
-      title_kn: "ಕಮಲ ಬಸದಿ",
-      category: "Heritage Architecture",
-      img: "/images/kamal_basti.svg",
-      desc: "800-year-old stone temple inside Belagavi Fort with 72-petal lotus ceiling."
-    }
-  ];
 
   return (
     <div className="py-24 bg-white dark:bg-navy-950 transition-colors">
@@ -208,32 +166,39 @@ export default function DiscoverBelagaviPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {landmarkGallery.map((item, idx) => (
-              <div
-                key={idx}
-                className="rounded-2xl overflow-hidden bg-gray-50 dark:bg-navy-900 border border-gray-200 dark:border-navy-800 shadow-sm hover:shadow-lg transition-all group"
-              >
-                <div className="relative aspect-[16/10] overflow-hidden">
-                  <Image
-                    src={item.img}
-                    alt={item.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute top-3 left-3 px-2 py-0.5 rounded-full bg-navy-950/80 backdrop-blur-sm text-[10px] font-bold text-gold-400 uppercase tracking-wider">
-                    {item.category}
+            {BELAGAVI_IMAGE_ATTRIBUTIONS.map((item) => (
+              <TiltCard key={item.id} maxTilt={6} className="h-full">
+                <div className="rounded-2xl overflow-hidden bg-gray-50 dark:bg-navy-900 border border-gray-200 dark:border-navy-800 shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between h-full">
+                  <div>
+                    <div className="relative aspect-[16/10] overflow-hidden bg-navy-950">
+                      <Image
+                        src={item.imagePath}
+                        alt={`${item.landmark} — Belagavi Authentic Photography`}
+                        fill
+                        className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 via-transparent to-transparent pointer-events-none" />
+                      <div className="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-navy-950/85 backdrop-blur-md text-[10px] font-bold text-gold-400 uppercase tracking-wider border border-white/10">
+                        {item.category}
+                      </div>
+                    </div>
+
+                    <div className="p-5 space-y-1.5">
+                      <h4 className="font-display font-extrabold text-navy-950 dark:text-white text-base group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">
+                        {language === 'kn' ? item.landmark_kn : item.landmark}
+                      </h4>
+                      <p className="font-sans text-xs text-gray-600 dark:text-gray-400 leading-relaxed font-normal">
+                        {language === 'kn' ? item.description_kn : item.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="p-5 pt-0 border-t border-gray-100 dark:border-navy-800/80 mt-2 flex items-center justify-between text-[10px] text-gray-400">
+                    <span className="truncate max-w-[170px]" title={item.author}>Photo: {item.author}</span>
+                    <span className="font-mono text-gold-600 dark:text-gold-400">{item.license.split(' ')[0]}</span>
                   </div>
                 </div>
-
-                <div className="p-5 space-y-1">
-                  <h4 className="font-bold text-navy-950 dark:text-white text-base">
-                    {language === 'kn' ? item.title_kn : item.title}
-                  </h4>
-                  <p className="text-xs text-gray-600 dark:text-gray-400">
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
+              </TiltCard>
             ))}
           </div>
         </div>

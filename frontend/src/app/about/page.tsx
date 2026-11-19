@@ -138,18 +138,22 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="lg:col-span-5 relative rounded-3xl overflow-hidden border border-gray-200 dark:border-navy-700 shadow-xl aspect-[4/3]">
-            <Image
-              src="/images/kittur_fort.svg"
-              alt="Kittur Fort Belagavi Heritage"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent" />
-            <div className="absolute bottom-4 left-4 right-4 text-white text-xs">
-              <span className="font-bold block text-gold-400">Heritage of Self-Reliance</span>
-              <span>Kittur Fort — Honoring Rani Chennamma’s sovereign legacy.</span>
-            </div>
+          <div className="lg:col-span-5 relative">
+            <TiltCard maxTilt={5}>
+              <div className="relative rounded-3xl overflow-hidden border border-gray-200 dark:border-navy-700 shadow-xl aspect-[4/3] group">
+                <Image
+                  src="/images/kittur_fort.jpg"
+                  alt="Kittur Fort Belagavi Heritage — Authentic Photograph"
+                  fill
+                  className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/20 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 text-white text-xs">
+                  <span className="font-display font-bold block text-gold-400">Heritage of Self-Reliance</span>
+                  <span className="font-sans text-gray-200">Kittur Fort — Honoring Rani Chennamma’s sovereign 1824 legacy.</span>
+                </div>
+              </div>
+            </TiltCard>
           </div>
         </div>
 
