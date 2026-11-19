@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" fill="none">
+  <defs>
+    <linearGradient id="goldGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDF3B8"/>
+      <stop offset="50%" stop-color="#E5C158"/>
+      <stop offset="100%" stop-color="#C29D2A"/>
+    </linearGradient>
+    <linearGradient id="blueMarkDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon Mark -->
+  <g transform="translate(5, 5)">
+    <!-- Bastion stem blocks -->
+    <rect x="10" y="66" width="15" height="18" rx="2" fill="url(#blueMarkDark)"/>
+    <rect x="10" y="45" width="15" height="18" rx="2" fill="url(#blueMarkDark)"/>
+    <rect x="10" y="24" width="15" height="18" rx="2" fill="url(#blueMarkDark)"/>
+    <!-- Gold crown block -->
+    <rect x="10" y="11" width="15" height="10" rx="2" fill="url(#goldGradDark)"/>
+    
+    <!-- Curved B Arches -->
+    <path d="M25 16 H52 C65 16, 73 24, 73 35 C73 45, 65 51, 52 51 H25" fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M25 47 H57 C71 47, 80 56, 80 68 C80 79, 70 84, 55 84 H25" fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <circle cx="50" cy="34" r="3.5" fill="url(#goldGradDark)"/>
+    <circle cx="55" cy="66" r="4" fill="url(#goldGradDark)"/>
+  </g>
+
+  <!-- Typography Lockup -->
+  <text x="102" y="44" font-family="'Manrope', 'Inter', sans-serif" font-size="34" font-weight="800" fill="#FFFFFF" letter-spacing="0.08em">BEDF</text>
+  <rect x="206" y="22" width="2" height="26" fill="url(#goldGradDark)"/>
+  <text x="218" y="32" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#F3F4F6" letter-spacing="0.14em">BELAGAVI ECONOMIC</text>
+  <text x="218" y="46" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#F3F4F6" letter-spacing="0.14em">DEVELOPMENT FOUNDATION</text>
+  
+  <!-- Kannada Subtitle & Tagline -->
+  <text x="103" y="68" font-family="'Noto Sans Kannada', 'Inter', sans-serif" font-size="12" font-weight="600" fill="#D1D5DB" letter-spacing="0.02em">ಬೆಳಗಾವಿ ಆರ್ಥಿಕ ಅಭಿವೃದ್ಧಿ ಪ್ರತಿಷ್ಠಾನ</text>
+  <text x="103" y="84" font-family="'Inter', sans-serif" font-size="9" font-weight="500" fill="#9CA3AF" letter-spacing="0.06em">Building Belagavi. Empowering North Karnataka.</text>
+</svg>
+

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B2D5B" />
+      <stop offset="50%" stop-color="#071A33" />
+      <stop offset="100%" stop-color="#040E1C" />
+    </linearGradient>
+    <linearGradient id="goldAcc" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FDE88F" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#A2801F" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bgGrad)" />
+  <rect width="1200" height="800" fill="url(#grid)" />
+  
+  <circle cx="950" cy="200" r="280" fill="rgba(212, 175, 55, 0.06)" />
+  <circle cx="200" cy="650" r="340" fill="rgba(29, 92, 184, 0.08)" />
+
+  <!-- Architectural & Topographic Silhouette -->
+  <path d="M0 640 L180 580 L320 620 L480 540 L650 610 L820 520 L990 570 L1200 510 L1200 800 L0 800 Z" fill="rgba(2, 9, 20, 0.7)" />
+  <path d="M0 680 L220 640 L440 670 L700 620 L920 650 L1200 600 L1200 800 L0 800 Z" fill="rgba(7, 26, 51, 0.9)" />
+  
+  <!-- Bastion Geometric Symbol -->
+  <g transform="translate(100, 120)">
+    <rect x="0" y="60" width="18" height="24" rx="3" fill="#3B82F6" />
+    <rect x="0" y="30" width="18" height="24" rx="3" fill="#3B82F6" />
+    <rect x="0" y="0" width="18" height="24" rx="3" fill="url(#goldAcc)" />
+  </g>
+
+  <!-- Editorial Category Tag -->
+  <rect x="136" y="126" width="180" height="32" rx="16" fill="rgba(212, 175, 55, 0.15)" stroke="rgba(212, 175, 55, 0.4)" stroke-width="1" />
+  <text x="226" y="147" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#D4AF37" text-anchor="middle" letter-spacing="0.1em">ECOLOGICAL CORRIDOR & CLIMATE</text>
+
+  <!-- Title & Description -->
+  <text x="100" y="240" font-family="'Manrope', 'Inter', sans-serif" font-size="44" font-weight="800" fill="#FFFFFF">Khanapur Western Ghats Ecosystem</text>
+  <rect x="100" y="270" width="80" height="4" fill="url(#goldAcc)" />
+  
+  <text x="100" y="320" font-family="'Inter', sans-serif" font-size="18" font-weight="400" fill="#94A3B8">Lush evergreen biodiversity hotspot forming the catchment for the Mahadayi and Malaprabha river systems.</text>
+  <text x="100" y="360" font-family="'Inter', sans-serif" font-size="14" font-weight="600" fill="#CBD5E1">Belagavi Economic Development Foundation — Documented Asset</text>
+
+  <!-- Verified Badge -->
+  <g transform="translate(100, 430)">
+    <rect x="0" y="0" width="260" height="46" rx="8" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" />
+    <circle cx="24" cy="23" r="8" fill="#10B981" />
+    <path d="M20 23 L23 26 L29 20" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="42" y="28" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#F1F5F9">Verified Regional Location</text>
+  </g>
+</svg>

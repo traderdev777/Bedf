@@ -1,0 +1,66 @@
+1:"/Bedf/_next/static/chunks/3qfy96eoyh-ek.js"
+2:"/Bedf/_next/static/chunks/0tquk-7qw87gz.js"
+3:"/Bedf/_next/static/chunks/2uhdmthh7gnbj.js"
+4:"/Bedf/_next/static/chunks/0s5o5lluq-zim.js"
+5:"LoadingBoundaryProvider"
+6:I[39756,["$1","$2","$3","$4"],"$5"]
+7:I[85437,["$1","$2","$3","$4"],"Image"]
+8:"$Sreact.fragment"
+9:I[9876,["$1","$2","$3","$4"],"ThemeProvider"]
+a:"LanguageProvider"
+b:I[83773,["$1","$2","$3","$4"],"$a"]
+c:I[2971,["$1","$2","$3","$4"],"default"]
+d:I[39756,["$1","$2","$3","$4"],"default"]
+e:I[37457,["$1","$2","$3","$4"],"default"]
+f:I[13642,["$1","$2","$3","$4"],"default"]
+10:I[91261,["$1","$2","$3","$4"],"default"]
+14:I[47257,["$1","$2","$3","$4"],"ClientPageRoot"]
+15:"/Bedf/_next/static/chunks/0cxn_3ngo6z_a.js"
+16:"/Bedf/_next/static/chunks/2t1_ll31pzqfk.js"
+17:"/Bedf/_next/static/chunks/27_eagkic7mzp.js"
+18:I[52683,["$1","$2","$3","$4","$15","$16","$17"],"default"]
+1b:I[97367,["$1","$2","$3","$4"],"OutletBoundary"]
+1c:"$Sreact.suspense"
+1f:"ViewportBoundary"
+20:I[97367,["$1","$2","$3","$4"],"$1f"]
+21:"MetadataBoundary"
+22:I[97367,["$1","$2","$3","$4"],"$21"]
+:HL["/Bedf/_next/static/chunks/183dhgrxqk2aw.css","style"]
+:HL["https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Manrope:wght@500;600;700;800;900&family=Noto+Sans+Kannada:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap","style"]
+12:X
+13:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$8","c",{"children":[["$","$L14",null,{"Component":"$18","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@19","$@1a"]}}],[["$","script","script-0",{"src":"/Bedf/_next/static/chunks/0cxn_3ngo6z_a.js","async":true}],["$","script","script-1",{"src":"/Bedf/_next/static/chunks/2t1_ll31pzqfk.js","async":true}],["$","script","script-2",{"src":"/Bedf/_next/static/chunks/27_eagkic7mzp.js","async":true}]],["$","$L1b",null,{"children":["$","$1c",null,{"name":"Next.MetadataOutlet","children":"$@1d"}]}]]}],"p":"$@1e","v":null,"s":"$12"}}]]
+0:{"t":{"t":{"s":"","h":84,"d":{"r":["$","$L6",null,{"loading":[["$","div","l",{"className":"fixed inset-0 z-50 flex flex-col items-center justify-center bg-white dark:bg-navy-950 transition-colors","children":["$","div",null,{"className":"relative flex flex-col items-center space-y-6","children":[["$","div",null,{"className":"relative","children":[["$","$L7",null,{"src":"/assets/bedf-logo-horizontal.png","alt":"Belagavi Economic Development Foundation (BEDF)","width":2172,"height":724,"priority":true,"className":"h-12 sm:h-14 w-auto object-contain block dark:hidden"}],["$","$L7",null,{"src":"/assets/bedf-logo-horizontal-white.png","alt":"Belagavi Economic Development Foundation (BEDF)","width":2172,"height":724,"priority":true,"className":"h-12 sm:h-14 w-auto object-contain hidden dark:block"}]]}],["$","div",null,{"className":"w-48 h-1 bg-gray-100 dark:bg-navy-800 rounded-full overflow-hidden","children":["$","div",null,{"className":"h-full bg-gradient-to-r from-gold-400 via-gold-500 to-amber-500 rounded-full animate-pulse"}]}],["$","p",null,{"className":"text-xs font-semibold tracking-widest uppercase text-navy-800 dark:text-gray-300","children":"Building Belagavi. Empowering North Karnataka."}]]}]}],[],null],"children":["$","$8","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/Bedf/_next/static/chunks/183dhgrxqk2aw.css","precedence":"next"}],["$","script","script-0",{"src":"/Bedf/_next/static/chunks/3qfy96eoyh-ek.js","async":true}],["$","script","script-1",{"src":"/Bedf/_next/static/chunks/0tquk-7qw87gz.js","async":true}],["$","script","script-2",{"src":"/Bedf/_next/static/chunks/2uhdmthh7gnbj.js","async":true}],["$","script","script-3",{"src":"/Bedf/_next/static/chunks/0s5o5lluq-zim.js","async":true}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":"anonymous"}],["$","link",null,{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Manrope:wght@500;600;700;800;900&family=Noto+Sans+Kannada:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"}]]}],["$","body",null,{"className":"min-h-screen flex flex-col font-sans antialiased selection:bg-gold-500 selection:text-navy-950 pb-16 lg:pb-0","children":["$","$L9",null,{"children":["$","$Lb",null,{"children":[["$","$Lc",null,{}],["$","main",null,{"className":"flex-grow","children":["$","$Ld",null,{"parallelRouterKey":"children","template":["$","$Le",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]]}]}],["$","$Lf",null,{}],["$","$L10",null,{}]]}]}]}]]}]]}]}],"p":"$@11","v":null,"s":"$12"},"c":"$Q13"},"h":{"r":["$","$8","h",{"children":[null,["$","$L20",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#FFFFFF"}]]}],["$","$L22",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1c",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"BEDF | Belagavi Economic Development Foundation (ಬೆಳಗಾವಿ ಆರ್ಥಿಕ ಅಭಿವೃದ್ಧಿ ಪ್ರತಿಷ್ಠಾನ)"}],["$","meta","1",{"name":"description","content":"Building Belagavi. Empowering North Karnataka. An independent regional development platform uniting industry, technology, aerospace, precision manufacturing, and education."}],"$L23","$L24","$L25","$L26","$L27","$L28","$L29","$L2a","$L2b","$L2c","$L2d","$L2e","$L2f","$L30","$L31","$L32","$L33","$L34","$L35","$L36","$L37","$L38","$L39"]}]}],null]}],null]}],"p":"$@3a","v":null,"s":"$12"}},"a":"$@3b","u":"$@3c","b":"R1XkcYnPD56IZ2tKJmrHa"}
+3d:I[27201,["$1","$2","$3","$4"],"IconMark"]
+19:{}
+1a:"$13:0:1:d:r:props:children:0:props:serverProvidedParams:params"
+1d:null
+23:["$","meta","2",{"name":"author","content":"Belagavi Economic Development Foundation"}]
+24:["$","meta","3",{"name":"keywords","content":"Belagavi,Belgaum,BEDF,Economic Development,Aequs SEZ,VTU Belagavi,Karnataka Industries,Aerospace Hub,Foundry Capital,North Karnataka Development"}]
+25:["$","meta","4",{"property":"og:title","content":"BEDF | Belagavi Economic Development Foundation"}]
+26:["$","meta","5",{"property":"og:description","content":"Building Belagavi. Empowering North Karnataka. Uniting industry, aerospace, and talent."}]
+27:["$","meta","6",{"property":"og:url","content":"https://bedf.org/"}]
+28:["$","meta","7",{"property":"og:site_name","content":"BEDF"}]
+29:["$","meta","8",{"property":"og:locale","content":"en_IN"}]
+2a:["$","meta","9",{"property":"og:image","content":"https://bedf.org/assets/bedf-logo-horizontal.png"}]
+2b:["$","meta","10",{"property":"og:image:width","content":"2172"}]
+2c:["$","meta","11",{"property":"og:image:height","content":"724"}]
+2d:["$","meta","12",{"property":"og:image:alt","content":"Belagavi Economic Development Foundation Official Logo"}]
+2e:["$","meta","13",{"property":"og:type","content":"website"}]
+2f:["$","meta","14",{"name":"twitter:card","content":"summary_large_image"}]
+30:["$","meta","15",{"name":"twitter:title","content":"BEDF | Belagavi Economic Development Foundation"}]
+31:["$","meta","16",{"name":"twitter:description","content":"Building Belagavi. Empowering North Karnataka. Uniting industry, aerospace, and talent."}]
+32:["$","meta","17",{"name":"twitter:image","content":"https://bedf.org/assets/bedf-logo-horizontal.png"}]
+33:["$","meta","18",{"name":"twitter:image:alt","content":"Belagavi Economic Development Foundation Official Logo"}]
+34:["$","meta","19",{"name":"twitter:image:width","content":"2172"}]
+35:["$","meta","20",{"name":"twitter:image:height","content":"724"}]
+36:["$","link","21",{"rel":"shortcut icon","href":"/favicon.svg"}]
+37:["$","link","22",{"rel":"icon","href":"/favicon.svg"}]
+38:["$","link","23",{"rel":"apple-touch-icon","href":"/favicon.svg"}]
+39:["$","$L3d","24",{}]
+12:300
+3c:true
+12:C
+3b:0
+11:"$undefined"
+3a:"$undefined"
+1e:"$undefined"
