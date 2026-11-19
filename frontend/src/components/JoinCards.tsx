@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
 import { 
   Users, 
@@ -11,6 +12,7 @@ import {
   Sparkles,
   ShieldCheck
 } from 'lucide-react';
+import { TiltCard, ScrollReveal, PREMIUM_EASE } from '@/components/motion/MotionSystem';
 
 export default function JoinCards() {
   const { t, language } = useLanguage();
@@ -61,78 +63,97 @@ export default function JoinCards() {
   ];
 
   return (
-    <section className="py-24 bg-bedf-lightBg dark:bg-navy-950 transition-colors">
+    <section className="py-24 bg-bedf-lightBg dark:bg-navy-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-3 mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-50 dark:bg-navy-900 border border-gold-500/30 text-gold-600 dark:text-gold-400 text-xs font-bold tracking-widest uppercase">
+        {/* Section Header */}
+        <ScrollReveal className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-50 dark:bg-navy-900 border border-gold-500/30 text-gold-600 dark:text-gold-400 text-xs font-bold tracking-widest uppercase shadow-sm">
             <Sparkles className="w-3.5 h-3.5" />
             <span>{t('Join the BEDF Network', 'ಬಿಇಡಿಎಫ್ ಜಾಲಕ್ಕೆ ಸೇರಿ')}</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-950 dark:text-white tracking-tight">
-            {t('Be Part of the Growth Story', 'ಬೆಳವಣಿಗೆಯ ಪಯಣದಲ್ಲಿ ನೀವೂ ಭಾಗಿಯಾಗಿ')}
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy-950 dark:text-white tracking-tight">
+            {t('Be Part of the Growth Story', 'ಬೆಳವಣಿಗೆಯ ಪಯಣದಲ್ಲಿ ನೀವೂ ಭಾಗಿಗಳಾಗಿ')}
           </h2>
 
-          <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base leading-relaxed">
             {t(
-              'Regional transformation requires passionate people. Whether as an industry member, skilled volunteer, or strategic institutional partner, your involvement counts.',
-              'ಪ್ರಾದೇಶಿಕ ಪರಿವರ್ತನೆಗೆ ಜನರ ಪಾಲ್ಗೊಳ್ಳುವಿಕೆ ಅತ್ಯಗತ್ಯ. ಕೈಗಾರಿಕಾ ಸದಸ್ಯರಾಗಿ, ನುರಿತ ಸ್ವಯಂಸೇವಕರಾಗಿ ಅಥವಾ ಸಂಸ್ಥಾಗತ ಪಾಲುದಾರರಾಗಿ ನಿಮ್ಮ ಕೊಡುಗೆ ಮಹತ್ವದ್ದು.'
+              'Whether you are an industry executive, young technologist, or regional institution, your active participation can accelerate Belagavi’s economic ascendancy.',
+              'ನೀವು ಉದ್ಯಮಿಯಾಗಿರಲಿ, ಯುವ ತಂತ್ರಜ್ಞರಾಗಿರಲಿ ಅಥವಾ ಶಿಕ್ಷಣ ಸಂಸ್ಥೆಯಾಗಿರಲಿ, ನಿಮ್ಮ ಸಕ್ರಿಯ ಭಾಗವಹಿಸುವಿಕೆ ಬೆಳಗಾವಿಯ ಆರ್ಥಿಕ ಪ್ರಗತಿಯನ್ನು ವೇಗಗೊಳಿಸುತ್ತದೆ.'
             )}
           </p>
-        </div>
+        </ScrollReveal>
 
-        {/* 3 Cards */}
+        {/* 3 Premium 3D Tilt Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {cards.map((card) => {
+          {cards.map((card, idx) => {
             const Icon = card.icon;
+
             return (
-              <div
-                key={card.id}
-                className={`p-8 rounded-3xl transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-xl hover:-translate-y-1.5 border ${
-                  card.isPrimary
-                    ? 'bg-white dark:bg-navy-900 border-gold-500/60 ring-1 ring-gold-500/20'
-                    : 'bg-white dark:bg-navy-900/80 border-gray-200/80 dark:border-navy-800'
-                }`}
-              >
-                <div>
-                  <div
-                    className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-colors shadow-sm ${
-                      card.isPrimary
-                        ? 'bg-gold-500 text-navy-950'
-                        : 'bg-navy-50 dark:bg-navy-800 text-navy-900 dark:text-gold-400 group-hover:bg-gold-500 group-hover:text-navy-950'
-                    }`}
-                  >
-                    <Icon className="w-7 h-7" />
+              <TiltCard key={card.id} maxTilt={6} className="h-full">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1, duration: 0.6, ease: PREMIUM_EASE }}
+                  className={`p-8 sm:p-10 rounded-3xl transition-all duration-300 flex flex-col justify-between group shadow-md hover:shadow-2xl h-full border ${
+                    card.isPrimary
+                      ? 'bg-white dark:bg-navy-900 border-gold-500/60 ring-2 ring-gold-500/10'
+                      : 'bg-white dark:bg-navy-900/80 border-gray-200/80 dark:border-navy-800'
+                  }`}
+                >
+                  <div>
+                    {/* Top Icon */}
+                    <div className="flex items-center justify-between mb-8">
+                      <div
+                        className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shadow-sm ${
+                          card.isPrimary
+                            ? 'bg-gradient-to-br from-gold-400 to-amber-500 text-navy-950 font-bold'
+                            : 'bg-navy-50 dark:bg-navy-800 text-navy-800 dark:text-gold-400 border border-gray-200 dark:border-navy-700'
+                        }`}
+                      >
+                        <Icon className="w-7 h-7" />
+                      </div>
+
+                      {card.isPrimary && (
+                        <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-gold-500/10 text-gold-600 dark:text-gold-400 border border-gold-500/30">
+                          {t('Featured', 'ಪ್ರಮುಖ')}
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-2xl font-black text-navy-950 dark:text-white group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">
+                      {language === 'kn' ? card.title_kn : card.title}
+                    </h3>
+
+                    {/* Tagline */}
+                    <p className="text-xs font-bold text-gold-600 dark:text-gold-400 mt-1">
+                      {language === 'kn' ? card.tagline_kn : card.tagline}
+                    </p>
+
+                    {/* Description */}
+                    <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-4 leading-relaxed">
+                      {language === 'kn' ? card.description_kn : card.description}
+                    </p>
                   </div>
 
-                  <h3 className="text-2xl font-extrabold text-navy-950 dark:text-white group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">
-                    {language === 'kn' ? card.title_kn : card.title}
-                  </h3>
-
-                  <p className="text-xs font-semibold text-gold-600 dark:text-gold-400 mt-1">
-                    {language === 'kn' ? card.tagline_kn : card.tagline}
-                  </p>
-
-                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-3 leading-relaxed">
-                    {language === 'kn' ? card.description_kn : card.description}
-                  </p>
-                </div>
-
-                <div className="mt-8 pt-6 border-t border-gray-100 dark:border-navy-800">
-                  <Link
-                    href={card.href}
-                    className={`w-full py-3 px-4 rounded-xl font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-sm ${
-                      card.isPrimary
-                        ? 'bg-navy-900 dark:bg-gold-500 text-white dark:text-navy-950 hover:bg-gold-600 dark:hover:bg-gold-400'
-                        : 'bg-gray-100 dark:bg-navy-800 text-navy-900 dark:text-white hover:bg-gold-500 hover:text-navy-950 dark:hover:bg-gold-500 dark:hover:text-navy-950'
-                    }`}
-                  >
-                    <span>{language === 'kn' ? card.actionLabel_kn : card.actionLabel}</span>
-                    <ArrowUpRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
+                  {/* Button Action */}
+                  <div className="mt-8 pt-4 border-t border-gray-100 dark:border-navy-800">
+                    <Link
+                      href={card.href}
+                      className={`w-full flex items-center justify-center gap-2 py-3.5 rounded-full font-bold text-xs transition-all duration-200 shadow-sm ${
+                        card.isPrimary
+                          ? 'bg-navy-900 dark:bg-gold-500 text-white dark:text-navy-950 hover:bg-gold-600 dark:hover:bg-gold-400 hover:shadow-lg'
+                          : 'bg-gray-100 dark:bg-navy-800 text-navy-900 dark:text-gray-200 hover:bg-gold-500 hover:text-navy-950'
+                      }`}
+                    >
+                      <span>{language === 'kn' ? card.actionLabel_kn : card.actionLabel}</span>
+                      <ArrowUpRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </motion.div>
+              </TiltCard>
             );
           })}
         </div>
@@ -140,4 +161,3 @@ export default function JoinCards() {
     </section>
   );
 }
-
