@@ -16,8 +16,11 @@ import {
   ArrowRight,
   Compass,
   Building,
-  CheckCircle2
+  CheckCircle2,
+  Sparkles,
+  Download
 } from 'lucide-react';
+import { TiltCard } from '@/components/motion/MotionSystem';
 
 export default function AboutPage() {
   const { t, language } = useLanguage();
@@ -171,6 +174,122 @@ export default function AboutPage() {
                 'ಸ್ಥಳೀಯ ಕೈಗಾರಿಕಾ ನಾಯಕರು, ವಿಟಿಯು ತಾಂತ್ರಿಕ ಜಾಲ ಮತ್ತು ದೂರದೃಷ್ಟಿಯ ಹೂಡಿಕೆದಾರರನ್ನು ಒಗ್ಗೂಡಿಸಿ ಉನ್ನತ ಉದ್ಯೋಗ ಮತ್ತು ಪ್ರಾದೇಶಿಕ ಆರ್ಥಿಕ ಸಮೃದ್ಧಿಯನ್ನು ಸೃಷ್ಟಿಸುವುದು.'
               )}
             </p>
+          </div>
+        </div>
+
+        {/* Section 2.5: Official Brand Insignia & Symbolism */}
+        <div className="p-8 sm:p-12 rounded-3xl bg-gray-50 dark:bg-navy-900 border border-gray-200 dark:border-navy-800 space-y-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-gray-200 dark:border-navy-800 pb-8">
+            <div className="space-y-2">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-100 dark:bg-navy-800 text-gold-600 dark:text-gold-400 text-xs font-bold tracking-widest uppercase">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>{t('Brand Identity & Architecture', 'ಬ್ರ್ಯಾಂಡ್ ಗುರುತು ಮತ್ತು ಲಾಂಛನ')}</span>
+              </div>
+              <h2 className="text-3xl font-black text-navy-950 dark:text-white">
+                {t('The BEDF Official Insignia', 'ಬಿಇಡಿಎಫ್ ಅಧಿಕೃತ ಲಾಂಛನ')}
+              </h2>
+              <p className="text-sm text-gray-600 dark:text-gray-400 max-w-2xl">
+                {t(
+                  'Every curve, colour, and element within the official BEDF insignia captures the essence of Belagavi—uniting our historic governance, agrarian abundance, industrial muscle, and soaring aerospace future.',
+                  'ಬಿಇಡಿಎಫ್ ಲಾಂಛನದ ಪ್ರತಿಯೊಂದು ವಿವರವು ಬೆಳಗಾವಿಯ ಹಿರಿಮೆ, ಸುವರ್ಣ ವಿಧಾನಸೌಧದ ಶಾಸಕಾಂಗ ವೈಭವ, ಕೃಷಿ ಸಮೃದ್ಧಿ, ಕೈಗಾರಿಕಾ ಶಕ್ತಿ ಮತ್ತು ಏರೋಸ್ಪೇಸ್ ಮುನ್ನೋಟವನ್ನು ಪ್ರತಿಬಿಂಬಿಸುತ್ತದೆ.'
+                )}
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            {/* Left 3D Brand Presentation Showcase */}
+            <div className="lg:col-span-6">
+              <TiltCard className="relative rounded-3xl overflow-hidden border border-gray-200 dark:border-navy-700 shadow-2xl aspect-[3/2] bg-navy-950 group">
+                <Image
+                  src="/assets/bedf-brand-mockup.jpg"
+                  alt="Official BEDF Brand Presentation Mockup"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-4 left-6 right-6 flex items-center justify-between text-white text-xs">
+                  <span className="font-semibold text-gold-400">BEDF Official Insignia Mockup</span>
+                  <span className="text-gray-300">Belagavi, Karnataka</span>
+                </div>
+              </TiltCard>
+            </div>
+
+            {/* Right Emblem Breakdown */}
+            <div className="lg:col-span-6 space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="p-4 rounded-2xl bg-white dark:bg-navy-950/70 border border-gray-100 dark:border-navy-800">
+                  <div className="flex items-center gap-2 text-gold-600 dark:text-gold-400 font-bold text-xs mb-1">
+                    <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
+                    <span>Suvarna Vidhana Soudha</span>
+                  </div>
+                  <p className="text-xs text-gray-600 dark:text-gray-400">
+                    {t('Represents Belagavi as Karnataka’s legislative capital and North Karnataka’s administrative pride.', 'ಕರ್ನಾಟಕದ ಎರಡನೇ ಶಾಸಕಾಂಗ ರಾಜಧಾನಿಯಾದ ಬೆಳಗಾವಿಯ ಆಡಳಿತಾತ್ಮಕ ಹಿರಿಮೆಯನ್ನು ಸೂಚಿಸುತ್ತದೆ.')}
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-white dark:bg-navy-950/70 border border-gray-100 dark:border-navy-800">
+                  <div className="flex items-center gap-2 text-gold-600 dark:text-gold-400 font-bold text-xs mb-1">
+                    <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
+                    <span>Industrial Skyline & Clean Power</span>
+                  </div>
+                  <p className="text-xs text-gray-600 dark:text-gray-400">
+                    {t('Highlights Belagavi’s 3,000+ foundry units, heavy machinery clusters, and green wind energy.', '3,000ಕ್ಕೂ ಹೆಚ್ಚು ಫೌಂಡ್ರಿ ಘಟಕಗಳು, ಭಾರೀ ಕೈಗಾರಿಕೆಗಳು ಮತ್ತು ಹಸಿರು ನವೀಕರಿಸಬಹುದಾದ ಇಂಧನವನ್ನು ಬಿಂಬಿಸುತ್ತದೆ.')}
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-white dark:bg-navy-950/70 border border-gray-100 dark:border-navy-800">
+                  <div className="flex items-center gap-2 text-gold-600 dark:text-gold-400 font-bold text-xs mb-1">
+                    <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
+                    <span>Agrarian Contours</span>
+                  </div>
+                  <p className="text-xs text-gray-600 dark:text-gray-400">
+                    {t('Symbolizes the lush agricultural valleys of Ghataprabha and Malaprabha, sugarcane wealth, and food processing.', 'ಘಟಪ್ರಭಾ-ಮಲಪ್ರಭಾ ಕಣಿವೆಗಳ ಫಲವತ್ತಾದ ಕೃಷಿ ಸಮೃದ್ಧಿ ಮತ್ತು ಕಬ್ಬು ಉತ್ಪಾದನೆಯನ್ನು ಸಂಕೇತಿಸುತ್ತದೆ.')}
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-white dark:bg-navy-950/70 border border-gray-100 dark:border-navy-800">
+                  <div className="flex items-center gap-2 text-gold-600 dark:text-gold-400 font-bold text-xs mb-1">
+                    <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
+                    <span>Aerospace Ascent & Golden Arc</span>
+                  </div>
+                  <p className="text-xs text-gray-600 dark:text-gray-400">
+                    {t('Honors India’s first notified precision aerospace SEZ (Aequs) and the unstoppable regional economic flight.', 'ಭಾರತದ ಮೊದಲ ಅಧಿಸೂಚಿತ ನಿಖರ ಏರೋಸ್ಪೇಸ್ ಸೆಜ್ ಮತ್ತು ಪ್ರಾದೇಶಿಕ ಆರ್ಥಿಕತೆಯ ಮುನ್ನಡೆಯನ್ನು ಸಾರುತ್ತದೆ.')}
+                  </p>
+                </div>
+              </div>
+
+              {/* Download Official Assets Bar */}
+              <div className="pt-4 border-t border-gray-200 dark:border-navy-800 flex flex-wrap items-center gap-3">
+                <span className="text-xs font-bold text-navy-950 dark:text-white">
+                  {t('Download Official Assets:', 'ಅಧಿಕೃತ ಲೋಗೋ ಡೌನ್‌ಲೋಡ್:')}
+                </span>
+                <a
+                  href="/assets/bedf-logo-horizontal.png"
+                  download="BEDF-Official-Horizontal-Logo.png"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-navy-950 border border-gray-200 dark:border-navy-800 text-xs font-semibold text-navy-900 dark:text-gold-400 hover:border-gold-500 transition-colors shadow-sm"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  <span>Horizontal (Light)</span>
+                </a>
+                <a
+                  href="/assets/bedf-logo-horizontal-white.png"
+                  download="BEDF-Official-Horizontal-Logo-White.png"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-navy-950 border border-gray-200 dark:border-navy-800 text-xs font-semibold text-navy-900 dark:text-gold-400 hover:border-gold-500 transition-colors shadow-sm"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  <span>Horizontal (Dark)</span>
+                </a>
+                <a
+                  href="/assets/bedf-brand-mockup.jpg"
+                  download="BEDF-Brand-Presentation.jpg"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-navy-950 border border-gray-200 dark:border-navy-800 text-xs font-semibold text-navy-900 dark:text-gold-400 hover:border-gold-500 transition-colors shadow-sm"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  <span>Brand Mockup</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
