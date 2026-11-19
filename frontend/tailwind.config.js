@@ -43,9 +43,13 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'Manrope', 'sans-serif'],
-        heading: ['Manrope', 'Inter', 'sans-serif'],
-        kannada: ['"Noto Sans Kannada"', 'sans-serif'],
+        sans: ['var(--font-body)', 'DM Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        body: ['var(--font-body)', 'DM Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        display: ['var(--font-display)', 'Manrope', 'sans-serif'],
+        heading: ['var(--font-display)', 'Manrope', 'sans-serif'],
+        serif: ['var(--font-serif)', '"Playfair Display"', 'Georgia', 'serif'],
+        editorial: ['var(--font-serif)', '"Playfair Display"', 'Georgia', 'serif'],
+        kannada: ['var(--font-kannada)', '"Noto Sans Kannada"', 'sans-serif'],
       },
       keyframes: {
         pulseSlow: {

@@ -113,7 +113,7 @@ export default function HeroSection() {
             variants={lineVariants}
             initial="hidden"
             animate="visible"
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.05] text-navy-950 dark:text-white"
+            className="text-hero-fluid font-display font-black tracking-tight text-navy-950 dark:text-white"
           >
             {t('A REGION.', 'ಒಂದು ಪ್ರದೇಶ.')}
           </motion.h1>
@@ -123,7 +123,7 @@ export default function HeroSection() {
             variants={lineVariants}
             initial="hidden"
             animate="visible"
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.05] text-navy-900/90 dark:text-gray-200"
+            className="text-hero-fluid font-display font-black tracking-tight text-navy-900/90 dark:text-gray-200"
           >
             {t('A VISION.', 'ಒಂದು ದೃಷ್ಟಿಕೋನ.')}
           </motion.h1>
@@ -133,7 +133,7 @@ export default function HeroSection() {
             variants={lineVariants}
             initial="hidden"
             animate="visible"
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.05] bg-gradient-to-r from-gold-600 via-gold-500 to-amber-600 dark:from-gold-300 dark:via-gold-400 dark:to-amber-500 bg-clip-text text-transparent drop-shadow-sm"
+            className="text-hero-fluid font-display font-black tracking-tight bg-gradient-to-r from-gold-600 via-gold-500 to-amber-600 dark:from-gold-300 dark:via-gold-400 dark:to-amber-500 bg-clip-text text-transparent drop-shadow-sm"
           >
             {t('A FUTURE.', 'ಒಂದು ಭವಿಷ್ಯ.')}
           </motion.h1>
@@ -152,7 +152,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.7, ease: PREMIUM_EASE }}
-          className="max-w-2xl text-base sm:text-xl text-gray-600 dark:text-gray-300 font-normal leading-relaxed text-center"
+          className="max-w-2xl text-lead-fluid font-sans text-gray-600 dark:text-gray-300 font-normal text-center"
         >
           {t(
             'Building Belagavi. Empowering North Karnataka. Uniting aerospace, advanced manufacturing, artificial intelligence, and regional entrepreneurship to pioneer the future.',
@@ -165,11 +165,11 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0, duration: 0.7, ease: PREMIUM_EASE }}
-          className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
+          className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto font-display"
         >
           <Link
             href="/#map"
-            className="w-full sm:w-auto px-8 py-4 rounded-full bg-navy-900 text-white hover:bg-navy-850 dark:bg-white dark:text-navy-950 dark:hover:bg-gray-100 font-extrabold text-sm transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 group"
+            className="w-full sm:w-auto px-8 py-4 rounded-full bg-navy-900 text-white hover:bg-navy-850 dark:bg-white dark:text-navy-950 dark:hover:bg-gray-100 font-extrabold text-sm tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 group"
           >
             <span>{t('Explore Belagavi Map', 'ಬೆಳಗಾವಿ ನಕ್ಷೆ ಅನ್ವೇಷಿಸಿ')}</span>
             <Compass className="w-4 h-4 text-gold-400 dark:text-navy-900 group-hover:rotate-45 transition-transform duration-300" />
@@ -177,7 +177,7 @@ export default function HeroSection() {
 
           <Link
             href="/join"
-            className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-gold-400 via-gold-500 to-amber-500 hover:from-gold-300 hover:to-gold-400 text-navy-950 font-black text-sm transition-all duration-300 shadow-lg hover:shadow-gold-500/25 hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-gold-400 via-gold-500 to-amber-500 hover:from-gold-300 hover:to-gold-400 text-navy-950 font-black text-sm tracking-wide transition-all duration-300 shadow-lg hover:shadow-gold-500/25 hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2"
           >
             <span>{t('Join BEDF Network', 'ಬಿಇಡಿಎಫ್ ಜಾಲಕ್ಕೆ ಸೇರಿ')}</span>
             <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

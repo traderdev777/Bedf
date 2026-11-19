@@ -106,11 +106,11 @@ export default function StatsCounter() {
             <span>{t('Our Vision in Verified Numbers', 'ಪರಿಶೀಲಿಸಿದ ಅಂಕಿಅಂಶಗಳಲ್ಲಿ ನಮ್ಮ ದೃಷ್ಟಿಕೋನ')}</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-black text-navy-950 dark:text-white tracking-tight">
+          <h2 className="text-h2-fluid font-display font-black text-navy-950 dark:text-white">
             {t('The Regional Scale of Opportunity', 'ಪ್ರಾದೇಶಿಕ ಅವಕಾಶಗಳ ನೈಜ ಚಿತ್ರಣ')}
           </h2>
 
-          <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+          <p className="font-sans text-lead-fluid text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             {t(
               'Documented baselines anchoring Belagavi as North Karnataka’s undisputed industrial, agricultural, and educational powerhouse.',
               'ಬೆಳಗಾವಿಯನ್ನು ಉತ್ತರ ಕರ್ನಾಟಕದ ಮುಂಚೂಣಿ ಕೈಗಾರಿಕಾ ಮತ್ತು ಶೈಕ್ಷಣಿಕ ರಾಜಧಾನಿಯನ್ನಾಗಿ ಸ್ಥಾಪಿಸುವ ಅಧಿಕೃತ ಅಂಕಿಅಂಶಗಳು.'
@@ -135,7 +135,7 @@ export default function StatsCounter() {
                   <div>
                     {/* Top Tag & Icon */}
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-gold-600 dark:text-gold-400">
+                      <span className="font-display text-[10px] font-bold uppercase tracking-wider text-gold-600 dark:text-gold-400">
                         {stat.source}
                       </span>
                       <div className="w-10 h-10 rounded-2xl bg-white dark:bg-navy-800 border border-gray-200 dark:border-navy-700 flex items-center justify-center text-gold-500 shadow-sm group-hover:scale-110 transition-transform duration-300">
@@ -144,7 +144,7 @@ export default function StatsCounter() {
                     </div>
 
                     {/* Animated Kinetic Number */}
-                    <div className="text-4xl sm:text-5xl font-black text-navy-950 dark:text-white tracking-tight flex items-baseline gap-1 my-2">
+                    <div className="text-stat-fluid font-display font-black text-navy-950 dark:text-white flex items-baseline gap-1 my-2">
                       <CountUp
                         value={stat.value}
                         prefix={stat.prefix}
@@ -154,12 +154,12 @@ export default function StatsCounter() {
                     </div>
 
                     {/* Title */}
-                    <h4 className="text-base font-extrabold text-navy-900 dark:text-gray-100 mt-2">
+                    <h4 className="font-display text-base font-extrabold text-navy-900 dark:text-gray-100 mt-2">
                       {language === 'kn' ? stat.label_kn : stat.label}
                     </h4>
 
                     {/* Subtext */}
-                    <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mt-2">
+                    <p className="font-sans text-xs text-gray-600 dark:text-gray-400 leading-relaxed mt-2 font-normal">
                       {language === 'kn' ? stat.subtext_kn : stat.subtext}
                     </p>
                   </div>

@@ -54,18 +54,26 @@ export default function IntroSection() {
             <WordReveal
               as="h2"
               text={t('A New Vision for Belagavi.', 'ಬೆಳಗಾವಿಗೆ ಒಂದು ನವೋದಯ ದೃಷ್ಟಿಕೋನ.')}
-              className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy-950 dark:text-white leading-[1.15] tracking-tight"
+              className="text-h2-fluid font-display font-black text-navy-950 dark:text-white"
             />
 
-            <ScrollReveal delay={0.2} className="space-y-4">
-              <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-normal">
+            {/* Editorial Statement: Selective Playfair Display Highlight */}
+            <blockquote className="font-editorial text-lg sm:text-xl text-navy-900 dark:text-gold-300 font-semibold border-l-2 border-gold-500 pl-4 py-1 my-4 leading-relaxed">
+              {t(
+                '“Belagavi is not merely transitioning; it is orchestrating North Karnataka’s high-technology economic resurgence.”',
+                '“ಬೆಳಗಾವಿಯು ಕೇವಲ ಬದಲಾಗುತ್ತಿಲ್ಲ; ಅದು ಉತ್ತರ ಕರ್ನಾಟಕದ ತಂತ್ರಜ್ಞಾನ ನವೋದಯವನ್ನು ಮುನ್ನಡೆಸುತ್ತಿದೆ.”'
+              )}
+            </blockquote>
+
+            <ScrollReveal delay={0.2} className="space-y-4 font-sans">
+              <p className="text-body-fluid text-gray-700 dark:text-gray-300 font-normal">
                 {t(
                   'Belagavi has the potential to emerge as a major centre for advanced manufacturing, aerospace, artificial intelligence, entrepreneurship and innovation.',
                   'ಸುಧಾರಿತ ಉತ್ಪಾದನೆ, ಏರೋಸ್ಪೇಸ್, ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ, ಉದ್ಯಮಶೀಲತೆ ಮತ್ತು ನಾವೀನ್ಯತೆಯ ಪ್ರಮುಖ ಕೇಂದ್ರವಾಗಿ ಬೆಳಗಾವಿ ಹೊರಹೊಮ್ಮುವ ಎಲ್ಲಾ ಸಾಮರ್ಥ್ಯವನ್ನು ಹೊಂದಿದೆ.'
                 )}
               </p>
 
-              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-normal">
                 {t(
                   'BEDF is an independent, citizen-led regional development initiative working to bring together industries, investors, entrepreneurs, institutions and citizens to create opportunities for sustainable economic growth.',
                   'ಬಿಇಡಿಎಫ್ ಒಂದು ಸ್ವತಂತ್ರ, ನಾಗರಿಕ ನೇತೃತ್ವದ ಪ್ರಾದೇಶಿಕ ಅಭಿವೃದ್ಧಿ ವೇದಿಕೆಯಾಗಿದ್ದು, ಕೈಗಾರಿಕೆಗಳು, ಹೂಡಿಕೆದಾರರು, ಶಿಕ್ಷಣ ಸಂಸ್ಥೆಗಳು ಮತ್ತು ನಾಗರಿಕರನ್ನು ಒಗ್ಗೂಡಿಸಿ ಸುಸ್ಥಿರ ಆರ್ಥಿಕ ಬೆಳವಣಿಗೆಯನ್ನು ಸಾಧಿಸಲು ಶ್ರಮಿಸುತ್ತದೆ.'

@@ -55,7 +55,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 font-display transition-all duration-300 ${
           scrolled
             ? 'bg-white/95 dark:bg-navy-950/95 backdrop-blur-md border-b border-gray-200/90 dark:border-navy-800/90 shadow-md py-3'
             : 'bg-white/90 dark:bg-navy-950/90 backdrop-blur-sm border-b border-gray-100/80 dark:border-navy-900/60 shadow-sm py-4'

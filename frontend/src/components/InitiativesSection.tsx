@@ -66,10 +66,10 @@ export default function InitiativesSection() {
               <Layers className="w-3.5 h-3.5" />
               <span>{t('Action Programmes & Roadmaps', 'ಅಭಿವೃದ್ಧಿ ಯೋಜನೆಗಳು')}</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy-950 dark:text-white tracking-tight">
+            <h2 className="text-h2-fluid font-display font-black text-navy-950 dark:text-white">
               {t('Turning Vision into Action', 'ದೃಷ್ಟಿಕೋನವನ್ನು ಕ್ರಿಯೆಯಾಗಿಸುವ ಹಾದಿ')}
             </h2>
-            <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed">
+            <p className="font-sans text-body-fluid text-gray-600 dark:text-gray-300">
               {t(
                 'BEDF advances regional development through structured initiatives. Each project features clear milestones, participation opportunities, and progress governance.',
                 'ಬಿಇಡಿಎಫ್ ಸ್ಪಷ್ಟ ಉದ್ದೇಶಗಳೊಂದಿಗೆ ಪ್ರಾದೇಶಿಕ ಉಪಕ್ರಮಗಳನ್ನು ಮುನ್ನಡೆಸುತ್ತದೆ. ಪ್ರತಿ ಯೋಜನೆಯು ಸಾರ್ವಜನಿಕ ಸಹಭಾಗಿತ್ವ ಮತ್ತು ಪಾರದರ್ಶಕ ಪ್ರಗತಿ ಪರಿಶೀಲನೆಯನ್ನು ಒಳಗೊಂಡಿದೆ.'

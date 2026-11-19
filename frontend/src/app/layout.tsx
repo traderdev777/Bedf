@@ -60,7 +60,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="min-h-screen flex flex-col antialiased selection:bg-gold-500 selection:text-navy-950 pb-16 lg:pb-0">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Manrope:wght@500;600;700;800;900&family=Noto+Sans+Kannada:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+        />
+      </head>
+      <body className="min-h-screen flex flex-col font-sans antialiased selection:bg-gold-500 selection:text-navy-950 pb-16 lg:pb-0">
         <ThemeProvider>
           <LanguageProvider>
             <Header />

@@ -151,14 +151,14 @@ function JoinContent() {
           <span>{t('Engage with BEDF', 'ಬಿಇಡಿಎಫ್ ಜತೆಗೆ ಕೈಜೋಡಿಸಿ')}</span>
         </div>
 
-        <h1 className="text-4xl sm:text-5xl font-black text-navy-950 dark:text-white tracking-tight">
+        <h1 className="text-h2-fluid font-display font-black text-navy-950 dark:text-white">
           {t(
             "Your Contribution Can Shape Belagavi's Future.",
             'ನಿಮ್ಮ ಕೊಡುಗೆ ಬೆಳಗಾವಿಯ ಭವಿಷ್ಯವನ್ನು ರೂಪಿಸಬಲ್ಲದು.'
           )}
         </h1>
 
-        <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
+        <p className="font-sans text-lead-fluid text-gray-600 dark:text-gray-300">
           {t(
             'Select your participation category below to join our network of regional champions, volunteers, and institutional partners.',
             'ನಮ್ಮ ಪ್ರಾದೇಶಿಕ ನಾಯಕರು, ಸ್ವಯಂಸೇವಕರು ಮತ್ತು ಪಾಲುದಾರರ ಜಾಲಕ್ಕೆ ಸೇರಲು ಸೂಕ್ತ ವರ್ಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ.'

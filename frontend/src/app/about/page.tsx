@@ -94,14 +94,14 @@ export default function AboutPage() {
             <span>{t('About the Foundation', 'ಪ್ರತಿಷ್ಠಾನದ ಬಗ್ಗೆ')}</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-navy-950 dark:text-white tracking-tight leading-tight">
+          <h1 className="text-hero-fluid font-display font-black text-navy-950 dark:text-white">
             {t(
               'Building Belagavi. Empowering North Karnataka.',
               'ಬೆಳಗಾವಿ ನಿರ್ಮಾಣ. ಉತ್ತರ ಕರ್ನಾಟಕದ ಸಬಲೀಕರಣ.'
             )}
           </h1>
 
-          <p className="text-base sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+          <p className="font-sans text-lead-fluid text-gray-600 dark:text-gray-300">
             {t(
               'Belagavi Economic Development Foundation (BEDF) is an independent, non-governmental, citizen-led regional catalyst dedicated to unlocking Belagavi’s economic momentum.',
               'ಬೆಳಗಾವಿ ಆರ್ಥಿಕ ಅಭಿವೃದ್ಧಿ ಪ್ರತಿಷ್ಠಾನ (BEDF) ಒಂದು ಸ್ವತಂತ್ರ, ಸರಕಾರೇತರ, ನಾಗರಿಕ ನೇತೃತ್ವದ ವೇದಿಕೆಯಾಗಿದ್ದು, ಬೆಳಗಾವಿ ಮತ್ತು ಉತ್ತರ ಕರ್ನಾಟಕದ ಸಮಗ್ರ ಆರ್ಥಿಕ ಪ್ರಗತಿಗೆ ಬದ್ಧವಾಗಿದೆ.'
@@ -112,16 +112,25 @@ export default function AboutPage() {
         {/* Section 1: Who We Are & Heritage */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-5">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-950 dark:text-white">
+            <h2 className="text-h2-fluid font-display font-black text-navy-950 dark:text-white">
               {t('Who We Are', 'ನಾವ್ಯಾರು')}
             </h2>
-            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+
+            {/* Editorial Statement: Playfair Display */}
+            <blockquote className="font-editorial text-lg sm:text-xl text-navy-900 dark:text-gold-300 font-semibold italic border-l-2 border-gold-500 pl-4 py-1 my-4 leading-relaxed">
+              {t(
+                '“Rooted in Rani Chennamma’s historic sovereign courage, Belagavi now commands an unstoppable trajectory in aerospace, clean energy, and applied intelligence.”',
+                '“ರಾಣಿ ಚೆನ್ನಮ್ಮನವರ ಐತಿಹಾಸಿಕ ಸ್ವಾಭಿಮಾನದ ತವರು ಬೆಳಗಾವಿಯು ಇಂದು ಏರೋಸ್ಪೇಸ್, ಹಸಿರು ಇಂಧನ ಮತ್ತು ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆಯ ಶಕ್ತಿಕೇಂದ್ರವಾಗಿ ಹೊರಹೊಮ್ಮುತ್ತಿದೆ.”'
+              )}
+            </blockquote>
+
+            <p className="font-sans text-body-fluid text-gray-700 dark:text-gray-300 font-normal">
               {t(
                 'Belagavi is historically renowned for its industrial resilience, military valour, academic depth, and strategic location at the convergence of Karnataka, Maharashtra, and Goa. However, regional industrial growth requires proactive coordination, institutional research, and modern digital storytelling to attract world-class enterprise.',
                 'ಬೆಳಗಾವಿಯು ಕೈಗಾರಿಕಾ ಶಕ್ತಿ, ಸೈನಿಕ ಶೌರ್ಯ, ಶೈಕ್ಷಣಿಕ ಹಿನ್ನೆಲೆ ಮತ್ತು ಮೂರು ರಾಜ್ಯಗಳ ಗಡಿ ಸಂಗಮದ ಮೂಲಕ ಐತಿಹಾಸಿಕವಾಗಿ ಪ್ರಸಿದ್ಧವಾಗಿದೆ. ಆದರೆ ಆಧುನಿಕ ಜಗತ್ತಿನಲ್ಲಿ ಬೃಹತ್ ಹೂಡಿಕೆಗಳನ್ನು ಆಕರ್ಷಿಸಲು ಪೂರ್ವಭಾವಿ ಸಂಯೋಜನೆ ಮತ್ತು ನಿಖರ ಸಂಶೋಧನೆ ಅಗತ್ಯ.'
               )}
             </p>
-            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+            <p className="font-sans text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-normal">
               {t(
                 'BEDF bridges the gap between grassroots industrialists, young engineers, research institutions, and international business networks. We operate with strict adherence to facts, zero political bias, and an unwavering commitment to regional prosperity.',
                 'ಬಿಇಡಿಎಫ್ ಸ್ಥಳೀಯ ಉದ್ಯಮಿಗಳು, ಯುವ ಎಂಜಿನಿಯರ್‌ಗಳು ಮತ್ತು ಅಂತರರಾಷ್ಟ್ರೀಯ ವಾಣಿಜ್ಯ ಜಾಲಗಳ ನಡುವೆ ಸೇತುವೆಯಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ.'

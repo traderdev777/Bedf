@@ -30,10 +30,16 @@ export default function LatestInsights() {
               <BookOpen className="w-3.5 h-3.5" />
               <span>{t('Knowledge & Research Centre', 'ಜ್ಞಾನ ಮತ್ತು ಸಂಶೋಧನಾ ಕೇಂದ್ರ')}</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy-950 dark:text-white tracking-tight">
+            <h2 className="text-h2-fluid font-display font-black text-navy-950 dark:text-white">
               {t('Ideas. Research. Developments.', 'ವಿಚಾರ. ಸಂಶೋಧನೆ. ಪ್ರಗತಿ.')}
             </h2>
-            <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed">
+            <p className="font-editorial text-base sm:text-lg text-navy-900/80 dark:text-gold-300 font-semibold italic">
+              {t(
+                '“Rigorous regional research forms the bedrock of long-term economic strategy.”',
+                '“ನಿಖರ ಪ್ರಾದೇಶಿಕ ಸಂಶೋಧನೆಯೇ ದೀರ್ಘಕಾಲೀನ ಆರ್ಥಿಕ ನೀತಿಯ ಭದ್ರ ಅಡಿಪಾಯ.”'
+              )}
+            </p>
+            <p className="font-sans text-body-fluid text-gray-600 dark:text-gray-300">
               {t(
                 'Rigorous, empirical whitepapers and sector studies assessing North Karnataka’s manufacturing competitiveness, logistics efficiency, and policy benchmarks.',
                 'ಉತ್ತರ ಕರ್ನಾಟಕದ ಕೈಗಾರಿಕಾ ಸ್ಪರ್ಧಾತ್ಮಕತೆ, ಸಾಗಣೆ ದಕ್ಷತೆ ಮತ್ತು ಆರ್ಥಿಕ ನೀತಿಗಳ ಕುರಿತಾದ ನಿಖರ ಅಧ್ಯಯನ ವರದಿಗಳು.'
@@ -43,7 +49,7 @@ export default function LatestInsights() {
 
           <Link
             href="/insights"
-            className="inline-flex items-center gap-2 text-sm font-bold text-navy-900 dark:text-gold-400 hover:text-gold-600 dark:hover:text-gold-300 transition-colors self-start md:self-auto group"
+            className="font-display inline-flex items-center gap-2 text-sm font-bold text-navy-900 dark:text-gold-400 hover:text-gold-600 dark:hover:text-gold-300 transition-colors self-start md:self-auto group"
           >
             <span>{t('Browse All Publications & Data', 'ಎಲ್ಲಾ ಸಂಶೋಧನಾ ವರದಿಗಳನ್ನು ವೀಕ್ಷಿಸಿ')}</span>
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

@@ -44,10 +44,10 @@ export default function SectorCards() {
               <Sparkles className="w-3.5 h-3.5" />
               <span>{t('7 Strategic Focus Areas', '7 ಕಾರ್ಯತಂತ್ರದ ವಲಯಗಳು')}</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-navy-950 dark:text-white tracking-tight">
+            <h2 className="text-h2-fluid font-display font-black text-navy-950 dark:text-white">
               {t('Where Industry Meets Innovation', 'ಕೈಗಾರಿಕೆ ಮತ್ತು ನಾವೀನ್ಯತೆಯ ಸಂಗಮ')}
             </h2>
-            <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed">
+            <p className="font-sans text-body-fluid text-gray-600 dark:text-gray-300">
               {t(
                 'Belagavi is transitioning from a traditional manufacturing hub into a high-technology powerhouse. Explore the seven pillars driving regional transformation.',
                 'ಬೆಳಗಾವಿಯು ಸಾಂಪ್ರದಾಯಿಕ ಉತ್ಪಾದನಾ ಕೇಂದ್ರದಿಂದ ಸುಧಾರಿತ ತಂತ್ರಜ್ಞಾನದ ಶಕ್ತಿಕೇಂದ್ರವಾಗಿ ಹೊರಹೊಮ್ಮುತ್ತಿದೆ. ಪ್ರಾದೇಶಿಕ ಪರಿವರ್ತನೆಗೆ ಚಾಲನೆ ನೀಡುವ ಏಳು ಪ್ರಮುಖ ಸ್ತಂಭಗಳನ್ನು ತಿಳಿಯಿರಿ.'
@@ -57,7 +57,7 @@ export default function SectorCards() {
 
           <Link
             href="/focus-areas"
-            className="inline-flex items-center gap-2 text-sm font-bold text-navy-900 dark:text-gold-400 hover:text-gold-600 dark:hover:text-gold-300 transition-colors self-start md:self-auto group"
+            className="font-display inline-flex items-center gap-2 text-sm font-bold text-navy-900 dark:text-gold-400 hover:text-gold-600 dark:hover:text-gold-300 transition-colors self-start md:self-auto group"
           >
             <span>{t('View Detailed Sector Portfolios', 'ಸಮಗ್ರ ವಲಯ ವಿವರಣೆಗಳು')}</span>
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

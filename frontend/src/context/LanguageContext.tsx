@@ -20,12 +20,23 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     const saved = localStorage.getItem('bedf-lang') as Language | null;
     if (saved === 'en' || saved === 'kn') {
       setLanguageState(saved);
+      if (typeof document !== 'undefined') {
+        document.documentElement.lang = saved;
+        document.documentElement.setAttribute('data-lang', saved);
+      }
+    } else if (typeof document !== 'undefined') {
+      document.documentElement.lang = 'en';
+      document.documentElement.setAttribute('data-lang', 'en');
     }
   }, []);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
     localStorage.setItem('bedf-lang', lang);
+    if (typeof document !== 'undefined') {
+      document.documentElement.lang = lang;
+      document.documentElement.setAttribute('data-lang', lang);
+    }
   };
 
   const toggleLanguage = () => {
