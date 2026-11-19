@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
 import { RESEARCH_REPORTS, ReportItem } from '@/data/bedfContent';
+import Logo from '@/components/Logo';
 import { 
   BookOpen, 
   Search, 
@@ -150,8 +151,9 @@ export default function InsightsPage() {
                 <X className="w-4 h-4" />
               </button>
 
-              <div className="pr-8">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-gold-500">
+              <div className="pr-8 space-y-2">
+                <Logo variant="horizontal" className="mb-2" />
+                <span className="text-[10px] font-bold uppercase tracking-wider text-gold-500 block">
                   {downloadModalReport.category}
                 </span>
                 <h3 className="text-xl font-bold text-navy-950 dark:text-white mt-1">

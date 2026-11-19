@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
+import Logo from '@/components/Logo';
 import { 
   ShieldCheck, 
   Users, 
@@ -122,6 +123,7 @@ export default function AdminPage() {
         {/* Top Header & Role Switcher */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-gray-200 dark:border-navy-800">
           <div>
+            <Logo variant="horizontal" className="mb-3" />
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
               <span className="text-[11px] uppercase font-bold tracking-widest text-gold-600 dark:text-gold-400">

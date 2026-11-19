@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import MobileContactBar from '@/components/MobileContactBar';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://bedf.org'),
   title: 'BEDF | Belagavi Economic Development Foundation (ಬೆಳಗಾವಿ ಆರ್ಥಿಕ ಅಭಿವೃದ್ಧಿ ಪ್ರತಿಷ್ಠಾನ)',
   description:
     'Building Belagavi. Empowering North Karnataka. An independent regional development platform uniting industry, technology, aerospace, precision manufacturing, and education.',
@@ -35,11 +36,19 @@ export const metadata: Metadata = {
     siteName: 'BEDF',
     locale: 'en_IN',
     type: 'website',
+    images: [
+      {
+        url: '/assets/bedf-logo-horizontal.png',
+        width: 2172,
+        height: 724,
+        alt: 'Belagavi Economic Development Foundation Official Logo',
+      },
+    ],
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: '#071A33',
+  themeColor: '#FFFFFF',
   width: 'device-width',
   initialScale: 1,
 };

@@ -22,10 +22,10 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       setThemeState(savedTheme);
       document.documentElement.classList.toggle('dark', savedTheme === 'dark');
     } else {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const initial = prefersDark ? 'dark' : 'light';
+      // Requirement: Primary & default website theme must be LIGHT on first visit
+      const initial: Theme = 'light';
       setThemeState(initial);
-      document.documentElement.classList.toggle('dark', initial === 'dark');
+      document.documentElement.classList.remove('dark');
     }
     setMounted(true);
   }, []);

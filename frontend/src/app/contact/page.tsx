@@ -3,6 +3,7 @@
 import React, { useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useLanguage } from '@/context/LanguageContext';
+import Logo from '@/components/Logo';
 import { 
   Phone, 
   Mail, 
@@ -209,6 +210,7 @@ export default function ContactPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Header */}
         <div className="max-w-3xl space-y-4">
+          <Logo variant="horizontal" className="mb-2" />
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-50 dark:bg-navy-900 border border-gold-500/30 text-gold-600 dark:text-gold-400 text-xs font-bold tracking-widest uppercase">
             <Mail className="w-3.5 h-3.5" />
             <span>{t('Foundation Liaison Desk', 'ಸಂಪರ್ಕ ಕೇಂದ್ರ')}</span>

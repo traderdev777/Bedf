@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
+import Logo from '@/components/Logo';
 import { 
   ShieldCheck, 
   Target, 
@@ -84,6 +85,7 @@ export default function AboutPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
         {/* Hero Header */}
         <div className="max-w-3xl space-y-4">
+          <Logo variant="horizontal" className="mb-2" />
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-50 dark:bg-navy-900 border border-gold-500/30 text-gold-600 dark:text-gold-400 text-xs font-bold tracking-widest uppercase">
             <Compass className="w-3.5 h-3.5" />
             <span>{t('About the Foundation', 'ಪ್ರತಿಷ್ಠಾನದ ಬಗ್ಗೆ')}</span>

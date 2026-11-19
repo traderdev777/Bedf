@@ -3,6 +3,7 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useLanguage } from '@/context/LanguageContext';
+import Logo from '@/components/Logo';
 import { 
   Users, 
   HeartHandshake, 
@@ -143,7 +144,8 @@ function JoinContent() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       {/* Header */}
-      <div className="text-center space-y-4 max-w-2xl mx-auto">
+      <div className="text-center space-y-4 max-w-2xl mx-auto flex flex-col items-center">
+        <Logo variant="horizontal" className="mb-2" />
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-50 dark:bg-navy-900 border border-gold-500/30 text-gold-600 dark:text-gold-400 text-xs font-bold tracking-widest uppercase">
           <Sparkles className="w-3.5 h-3.5" />
           <span>{t('Engage with BEDF', 'ಬಿಇಡಿಎಫ್ ಜತೆಗೆ ಕೈಜೋಡಿಸಿ')}</span>
@@ -225,6 +227,35 @@ function JoinContent() {
                   'ನಿಮ್ಮ ಅರ್ಜಿಯ ವಿವರಗಳನ್ನು ದಾಖಲಿಸಿಕೊಳ್ಳಲಾಗಿದೆ. ನೀವು ನೇರವಾಗಿ ನಮ್ಮ ಅಧಿಕೃತ ವಾಟ್ಸಾಪ್ ಸಹಾಯವಾಣಿಗೂ ಕಳುಹಿಸಬಹುದು.'
                 )}
           </p>
+
+          {/* Digital Credential Preview */}
+          <div className="p-6 rounded-2xl bg-gradient-to-br from-white to-gray-50 dark:from-navy-900 dark:to-navy-950 border-2 border-gold-400/40 shadow-lg max-w-md mx-auto text-center space-y-3 relative overflow-hidden">
+            <div className="flex justify-center">
+              <Logo variant="horizontal" />
+            </div>
+            <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto" />
+            <span className="text-[10px] tracking-widest uppercase font-bold text-gold-600 dark:text-gold-400 block">
+              Provisional Digital Registration
+            </span>
+            <h4 className="text-lg font-black text-navy-950 dark:text-white">
+              {activeTab === 'membership'
+                ? (membershipForm.fullName || 'Member Candidate')
+                : activeTab === 'volunteer'
+                ? (volunteerForm.fullName || 'Volunteer Candidate')
+                : (partnerForm.orgName || 'Partner Candidate')}
+            </h4>
+            <p className="text-xs text-gray-500 dark:text-gray-400">
+              {activeTab === 'membership'
+                ? membershipForm.category
+                : activeTab === 'volunteer'
+                ? volunteerForm.preferredRole
+                : partnerForm.collaborationScope || 'Institutional Collaboration'}
+            </p>
+            <div className="text-[10px] text-gray-400 border-t border-gray-100 dark:border-navy-800 pt-2 flex items-center justify-between">
+              <span>Ref: BEDF-REG-{Date.now().toString().slice(-6)}</span>
+              <span>Belagavi, Karnataka</span>
+            </div>
+          </div>
 
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
