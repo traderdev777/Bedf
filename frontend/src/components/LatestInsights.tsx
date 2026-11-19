@@ -4,12 +4,12 @@ import React from 'react';
 import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
 import { RESEARCH_REPORTS } from '@/data/bedfContent';
-import { 
-  FileText, 
-  ArrowRight, 
-  Download, 
-  Calendar, 
-  BookOpen, 
+import {
+  FileText,
+  ArrowRight,
+  Download,
+  Calendar,
+  BookOpen,
   ExternalLink,
   ShieldCheck
 } from 'lucide-react';
@@ -108,3 +108,4 @@ export default function LatestInsights() {
     </section>
   );
 }
+

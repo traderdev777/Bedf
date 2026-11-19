@@ -710,3 +710,4 @@ export const BELAGAVI_LOCATIONS: MapLocation[] = [
     source: "BEDF Human Capital Taskforce (Proposed Opportunity)"
   }
 ];
+

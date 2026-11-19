@@ -130,3 +130,4 @@ class ContactCreate(BaseModel):
     organization: Optional[str] = None
     enquiryType: str = "General Enquiry"
     message: str
+

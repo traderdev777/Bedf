@@ -60,3 +60,4 @@ def submit_volunteer_application(data: VolunteerCreate, db: Session = Depends(ge
         "volunteer_id": vol.id,
         "status": vol.status
     }
+

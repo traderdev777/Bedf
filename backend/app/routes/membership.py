@@ -53,3 +53,4 @@ def submit_membership_application(data: MembershipCreate, db: Session = Depends(
         "application_id": app.id,
         "status": app.status
     }
+

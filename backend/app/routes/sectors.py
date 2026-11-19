@@ -17,3 +17,4 @@ def get_sector_by_slug(slug: str, db: Session = Depends(get_db)):
     if not sector:
         raise HTTPException(status_code=404, detail="Sector not found")
     return sector
+

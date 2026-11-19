@@ -510,3 +510,4 @@ export const BELAGAVI_FACTS = [
   { label: "Sambra Airport Runway", label_kn: "ವಿಮಾನ ನಿಲ್ದಾಣದ ರನ್‌ವೇ", value: "2,300m (Code 4C)" },
   { label: "Karnataka Engineering HQ", label_kn: "ಎಂಜಿನಿಯರಿಂಗ್ ಪ್ರಧಾನ ಕೇಂದ್ರ", value: "VTU Headquarters" }
 ];
+

@@ -156,3 +156,4 @@ class AuditLog(Base):
     user_id = Column(String(100), default="system")
     details = Column(Text, nullable=True)
     timestamp = Column(DateTime, default=datetime.utcnow)
+

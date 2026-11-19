@@ -32,3 +32,4 @@ def submit_contact_message(data: ContactCreate, db: Session = Depends(get_db)):
         "message": "Enquiry received by BEDF Secretariat",
         "message_id": msg.id
     }
+

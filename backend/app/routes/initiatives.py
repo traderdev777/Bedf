@@ -20,3 +20,4 @@ def get_project_by_slug(slug: str, db: Session = Depends(get_db)):
     if not proj:
         raise HTTPException(status_code=404, detail="Initiative not found")
     return proj
+

@@ -220,3 +220,4 @@ with open("frontend/src/data/credits.json", "w") as f:
     json.dump(credits_list, f, indent=2)
 
 print(f"Successfully processed {len(credits_list)} verified assets & generated credits.json!")
+

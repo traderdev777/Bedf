@@ -51,3 +51,4 @@ def test_admin_dashboard_metrics():
     data = response.json()
     assert "metrics" in data
     assert data["metrics"]["total_membership_applications"] >= 1
+

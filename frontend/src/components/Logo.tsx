@@ -90,3 +90,4 @@ export default function Logo({ variant = 'full', className = '', isDark = false 
     </Link>
   );
 }
+

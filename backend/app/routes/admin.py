@@ -60,3 +60,4 @@ def get_all_applications(db: Session = Depends(get_db)):
 def get_audit_logs(db: Session = Depends(get_db)):
     logs = db.query(AuditLog).order_by(AuditLog.timestamp.desc()).limit(100).all()
     return {"logs": logs}
+

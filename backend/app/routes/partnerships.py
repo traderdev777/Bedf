@@ -34,3 +34,4 @@ def submit_partnership(data: PartnershipCreate, db: Session = Depends(get_db)):
         "partner_id": partner.id,
         "status": partner.status
     }
+

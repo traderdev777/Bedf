@@ -147,3 +147,4 @@ docker-compose up --build
 ---
 
 © 2026 Belagavi Economic Development Foundation (BEDF). All rights reserved.
+

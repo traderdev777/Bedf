@@ -38,3 +38,4 @@ def get_districts():
             "Nipani", "Kittur", "Mudalgi", "Kagwad", "Yaragatti"
         ]
     }
+
