@@ -184,8 +184,8 @@ function JoinContent() {
           onClick={() => { setActiveTab('volunteer'); setSubmittedStatus(null); }}
           className={`py-3 px-2 sm:px-4 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all ${
             activeTab === 'volunteer'
-              ? 'bg-navy-900 text-white dark:bg-gold-500 dark:text-navy-950 shadow-md'
-              : 'text-gray-600 dark:text-gray-400 hover:text-navy-950 dark:hover:text-white'
+              ? 'bg-orange-500 text-white shadow-md shadow-orange-500/25'
+              : 'text-gray-600 dark:text-gray-400 hover:text-orange-500'
           }`}
         >
           <HeartHandshake className="w-4 h-4" />
@@ -196,8 +196,8 @@ function JoinContent() {
           onClick={() => { setActiveTab('partner'); setSubmittedStatus(null); }}
           className={`py-3 px-2 sm:px-4 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all ${
             activeTab === 'partner'
-              ? 'bg-navy-900 text-white dark:bg-gold-500 dark:text-navy-950 shadow-md'
-              : 'text-gray-600 dark:text-gray-400 hover:text-navy-950 dark:hover:text-white'
+              ? 'bg-emerald-700 text-white shadow-md shadow-emerald-700/25'
+              : 'text-gray-600 dark:text-gray-400 hover:text-emerald-700'
           }`}
         >
           <Handshake className="w-4 h-4" />
@@ -690,7 +690,13 @@ function JoinContent() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 rounded-xl bg-gold-500 hover:bg-gold-400 text-navy-950 font-black text-sm transition-all duration-200 shadow-md flex items-center justify-center gap-2 disabled:opacity-50"
+                className={`w-full py-4 rounded-xl font-black text-sm transition-all duration-200 shadow-md flex items-center justify-center gap-2 disabled:opacity-50 ${
+                  activeTab === 'volunteer'
+                    ? 'bg-orange-500 hover:bg-orange-600 text-white shadow-orange-500/25'
+                    : activeTab === 'partner'
+                    ? 'bg-emerald-700 hover:bg-emerald-800 text-white shadow-emerald-700/25'
+                    : 'bg-gradient-to-r from-gold-400 via-gold-500 to-amber-500 hover:from-gold-300 hover:to-gold-400 text-navy-950 shadow-gold-500/20'
+                }`}
               >
                 {isSubmitting ? (
                   <span>{t('Submitting Application...', 'ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸಲಾಗುತ್ತಿದೆ...')}</span>

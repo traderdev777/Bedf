@@ -304,6 +304,85 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
+
+          {/* Official Design System Palette Swatches */}
+          <div className="pt-8 border-t border-gray-200 dark:border-navy-800 space-y-4">
+            <div className="flex items-center justify-between">
+              <div>
+                <h4 className="text-sm font-bold text-navy-950 dark:text-white">
+                  {t('Official Brand Palette & Design Tokens', 'ಅಧಿಕೃತ ಬಣ್ಣಗಳ ವ್ಯವಸ್ಥೆ')}
+                </h4>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+                  {t('Harmonized institutional colour hierarchy governing all digital touchpoints', 'ಎಲ್ಲಾ ಡಿಜಿಟಲ್ ಮಾಧ್ಯಮಗಳಲ್ಲಿ ಬಳಸಲಾದ ಸಮನ್ವಯ ಬಣ್ಣಗಳ ವ್ಯವಸ್ಥೆ')}
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
+              <div className="p-3 rounded-2xl bg-white dark:bg-navy-950 border border-gray-200 dark:border-navy-800 space-y-2">
+                <div className="w-full h-8 rounded-lg bg-[#145A45] shadow-sm" />
+                <div>
+                  <span className="block text-[11px] font-bold text-navy-950 dark:text-white">Deep Emerald</span>
+                  <span className="block text-[10px] font-mono text-gray-400">#145A45</span>
+                  <span className="block text-[9px] text-emerald-600 font-semibold mt-0.5">Primary Accent</span>
+                </div>
+              </div>
+
+              <div className="p-3 rounded-2xl bg-white dark:bg-navy-950 border border-gray-200 dark:border-navy-800 space-y-2">
+                <div className="w-full h-8 rounded-lg bg-[#142B45] shadow-sm" />
+                <div>
+                  <span className="block text-[11px] font-bold text-navy-950 dark:text-white">Midnight Navy</span>
+                  <span className="block text-[10px] font-mono text-gray-400">#142B45</span>
+                  <span className="block text-[9px] text-blue-600 font-semibold mt-0.5">Institutional</span>
+                </div>
+              </div>
+
+              <div className="p-3 rounded-2xl bg-white dark:bg-navy-950 border border-orange-500/40 ring-1 ring-orange-500/20 space-y-2">
+                <div className="w-full h-8 rounded-lg bg-[#D95B20] shadow-sm" />
+                <div>
+                  <span className="block text-[11px] font-bold text-navy-950 dark:text-white">Deep Orange</span>
+                  <span className="block text-[10px] font-mono text-orange-600">#D95B20</span>
+                  <span className="block text-[9px] text-orange-600 font-bold mt-0.5">Energy & Innovation</span>
+                </div>
+              </div>
+
+              <div className="p-3 rounded-2xl bg-white dark:bg-navy-950 border border-gray-200 dark:border-navy-800 space-y-2">
+                <div className="w-full h-8 rounded-lg bg-[#C5A15B] shadow-sm" />
+                <div>
+                  <span className="block text-[11px] font-bold text-navy-950 dark:text-white">Champagne Gold</span>
+                  <span className="block text-[10px] font-mono text-gray-400">#C5A15B</span>
+                  <span className="block text-[9px] text-amber-600 font-semibold mt-0.5">Decorative</span>
+                </div>
+              </div>
+
+              <div className="p-3 rounded-2xl bg-white dark:bg-navy-950 border border-gray-200 dark:border-navy-800 space-y-2">
+                <div className="w-full h-8 rounded-lg bg-[#F7F8F4] border border-gray-300 dark:border-navy-700 shadow-sm" />
+                <div>
+                  <span className="block text-[11px] font-bold text-navy-950 dark:text-white">Warm Ivory</span>
+                  <span className="block text-[10px] font-mono text-gray-400">#F7F8F4</span>
+                  <span className="block text-[9px] text-gray-500 font-semibold mt-0.5">Dominant Light Bg</span>
+                </div>
+              </div>
+
+              <div className="p-3 rounded-2xl bg-white dark:bg-navy-950 border border-gray-200 dark:border-navy-800 space-y-2">
+                <div className="w-full h-8 rounded-lg bg-[#E5EDE6] border border-gray-300 dark:border-navy-700 shadow-sm" />
+                <div>
+                  <span className="block text-[11px] font-bold text-navy-950 dark:text-white">Soft Sage</span>
+                  <span className="block text-[10px] font-mono text-gray-400">#E5EDE6</span>
+                  <span className="block text-[9px] text-gray-500 font-semibold mt-0.5">Subtle Balance</span>
+                </div>
+              </div>
+
+              <div className="p-3 rounded-2xl bg-white dark:bg-navy-950 border border-gray-200 dark:border-navy-800 space-y-2">
+                <div className="w-full h-8 rounded-lg bg-[#263238] shadow-sm" />
+                <div>
+                  <span className="block text-[11px] font-bold text-navy-950 dark:text-white">Charcoal</span>
+                  <span className="block text-[10px] font-mono text-gray-400">#263238</span>
+                  <span className="block text-[9px] text-gray-500 font-semibold mt-0.5">Body Contrast</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Section 3: Core Operating Values */}

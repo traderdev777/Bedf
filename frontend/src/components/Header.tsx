@@ -17,7 +17,7 @@ import {
   ArrowUpRight,
   ChevronRight
 } from 'lucide-react';
-import { PREMIUM_EASE } from '@/components/motion/MotionSystem';
+import { PREMIUM_EASE, ScrollProgressBar } from '@/components/motion/MotionSystem';
 
 export default function Header() {
   const pathname = usePathname();
@@ -54,6 +54,7 @@ export default function Header() {
 
   return (
     <>
+      <ScrollProgressBar />
       <header
         className={`fixed top-0 left-0 right-0 z-50 font-display transition-all duration-300 ${
           scrolled

@@ -7,6 +7,7 @@ import {
   useReducedMotion, 
   useMotionValue, 
   useTransform, 
+  useScroll,
   animate 
 } from 'framer-motion';
 
@@ -354,4 +355,60 @@ export function CountUp({
     </span>
   );
 }
+
+/**
+ * Animated Deep Orange Underline Accent
+ * For energy, innovation, and key action highlights
+ */
+export function AnimatedOrangeUnderline({
+  className = '',
+  width = 'w-24',
+}: {
+  className?: string;
+  width?: string;
+}) {
+  return (
+    <div className={`overflow-hidden h-1.5 ${width} ${className}`}>
+      <motion.div
+        initial={{ scaleX: 0, originX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.9, delay: 0.2, ease: PREMIUM_EASE }}
+        className="h-full bg-gradient-to-r from-orange-500 via-orange-600 to-amber-600 rounded-full shadow-sm shadow-orange-500/30"
+      />
+    </div>
+  );
+}
+
+/**
+ * Top Viewport Scroll Progress Bar
+ * Deep Orange energy progress indicator tracking reading progress across the page
+ */
+export function ScrollProgressBar() {
+  const { scrollYProgress } = useScroll();
+  return (
+    <motion.div
+      className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-emerald-600 via-orange-500 to-orange-600 z-[100] origin-left pointer-events-none"
+      style={{ scaleX: scrollYProgress }}
+    />
+  );
+}
+
+/**
+ * Deep Orange Animated Text Accent
+ */
+export function OrangeTextAccent({
+  children,
+  className = '',
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <span className={`text-orange-600 dark:text-orange-400 font-extrabold tracking-tight transition-colors ${className}`}>
+      {children}
+    </span>
+  );
+}
+
 

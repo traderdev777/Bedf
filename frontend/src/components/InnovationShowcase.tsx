@@ -126,8 +126,8 @@ export default function InnovationShowcase() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <ScrollReveal className="max-w-3xl mx-auto text-center space-y-3 mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-600 dark:text-gold-400 text-xs font-bold tracking-widest uppercase shadow-sm">
-            <Sparkles className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-600 dark:text-orange-400 text-xs font-bold tracking-widest uppercase shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-orange-500" />
             <span>{t('Future Opportunities for Belagavi', 'ಬೆಳಗಾವಿಯ ಭವಿಷ್ಯದ ಅವಕಾಶಗಳು')}</span>
           </div>
 
@@ -168,15 +168,15 @@ export default function InnovationShowcase() {
                   onClick={() => setActiveTab(index)}
                   className={`w-full p-4 rounded-2xl text-left transition-all duration-300 flex items-center justify-between border ${
                     isActive
-                      ? 'bg-navy-900 dark:bg-navy-800 text-white border-gold-500 shadow-md translate-x-1.5 ring-1 ring-gold-500/30'
-                      : 'bg-gray-50/90 dark:bg-navy-950/50 text-gray-700 dark:text-gray-300 border-gray-200/80 dark:border-navy-800 hover:bg-gray-100 dark:hover:bg-navy-900'
+                      ? 'bg-navy-900 dark:bg-navy-800 text-white border-orange-500 shadow-md translate-x-1.5 ring-1 ring-orange-500/30'
+                      : 'bg-gray-50/90 dark:bg-navy-950/50 text-gray-700 dark:text-gray-300 border-gray-200/80 dark:border-navy-800 hover:bg-gray-100 dark:hover:bg-navy-900 hover:border-orange-500/30'
                   }`}
                 >
                   <div className="flex items-center gap-3">
                     <div
                       className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors ${
                         isActive
-                          ? 'bg-gold-500 text-navy-950 shadow-sm'
+                          ? 'bg-gradient-to-br from-orange-500 to-amber-600 text-white shadow-sm'
                           : 'bg-white dark:bg-navy-900 text-navy-700 dark:text-gray-300 border border-gray-200 dark:border-navy-700'
                       }`}
                     >
@@ -184,7 +184,7 @@ export default function InnovationShowcase() {
                     </div>
 
                     <div>
-                      <span className="block text-[10px] uppercase font-bold tracking-wider text-gold-500">
+                      <span className={`block text-[10px] uppercase font-bold tracking-wider ${isActive ? 'text-orange-400' : 'text-gold-500'}`}>
                         {language === 'kn' ? item.category_kn : item.category}
                       </span>
                       <span className="block text-sm font-bold">
@@ -195,7 +195,7 @@ export default function InnovationShowcase() {
 
                   <ArrowRight
                     className={`w-4 h-4 transition-transform ${
-                      isActive ? 'text-gold-400 translate-x-1' : 'text-gray-400 opacity-40'
+                      isActive ? 'text-orange-400 translate-x-1' : 'text-gray-400 opacity-40'
                     }`}
                   />
                 </button>
@@ -266,10 +266,10 @@ export default function InnovationShowcase() {
 
                   <Link
                     href={`/contact?subject=${encodeURIComponent(`Innovation Proposal: ${current.title}`)}`}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold text-xs transition-colors shadow-md shadow-gold-500/20"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs transition-all duration-200 shadow-md shadow-orange-500/25 group"
                   >
                     <span>{t('Propose Joint R&D Pilot', 'ಸಂಶೋಧನಾ ಯೋಜನೆ ಪ್ರಸ್ತಾಪಿಸಿ')}</span>
-                    <ArrowUpRight className="w-4 h-4" />
+                    <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </Link>
                 </div>
               </div>

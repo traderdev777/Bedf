@@ -109,15 +109,25 @@ export default function JoinCards() {
                         className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shadow-sm ${
                           card.isPrimary
                             ? 'bg-gradient-to-br from-gold-400 to-amber-500 text-navy-950 font-bold'
-                            : 'bg-navy-50 dark:bg-navy-800 text-navy-800 dark:text-gold-400 border border-gray-200 dark:border-navy-700'
+                            : card.id === 'volunteer'
+                            ? 'bg-orange-50 dark:bg-orange-950/50 text-orange-600 dark:text-orange-400 border border-orange-200 dark:border-orange-800'
+                            : 'bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800'
                         }`}
                       >
                         <Icon className="w-7 h-7" />
                       </div>
 
-                      {card.isPrimary && (
+                      {card.isPrimary ? (
                         <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-gold-500/10 text-gold-600 dark:text-gold-400 border border-gold-500/30">
-                          {t('Featured', 'ಪ್ರಮುಖ')}
+                          {t('Network', 'ಜಾಲ')}
+                        </span>
+                      ) : card.id === 'volunteer' ? (
+                        <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-orange-500/10 text-orange-600 dark:text-orange-400 border border-orange-500/30">
+                          {t('Action & Energy', 'ಸಕ್ರಿಯ ತೊಡಗಿಸಿಕೊಳ್ಳುವಿಕೆ')}
+                        </span>
+                      ) : (
+                        <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/30">
+                          {t('Institutional', 'ಸಂಸ್ಥಾಗತ')}
                         </span>
                       )}
                     </div>
@@ -128,7 +138,13 @@ export default function JoinCards() {
                     </h3>
 
                     {/* Tagline */}
-                    <p className="text-xs font-bold text-gold-600 dark:text-gold-400 mt-1">
+                    <p className={`text-xs font-bold mt-1 ${
+                      card.id === 'volunteer'
+                        ? 'text-orange-600 dark:text-orange-400'
+                        : card.id === 'partner'
+                        ? 'text-emerald-700 dark:text-emerald-400'
+                        : 'text-gold-600 dark:text-gold-400'
+                    }`}>
                       {language === 'kn' ? card.tagline_kn : card.tagline}
                     </p>
 
@@ -145,7 +161,9 @@ export default function JoinCards() {
                       className={`w-full flex items-center justify-center gap-2 py-3.5 rounded-full font-bold text-xs transition-all duration-200 shadow-sm ${
                         card.isPrimary
                           ? 'bg-navy-900 dark:bg-gold-500 text-white dark:text-navy-950 hover:bg-gold-600 dark:hover:bg-gold-400 hover:shadow-lg'
-                          : 'bg-gray-100 dark:bg-navy-800 text-navy-900 dark:text-gray-200 hover:bg-gold-500 hover:text-navy-950'
+                          : card.id === 'volunteer'
+                          ? 'bg-orange-500 hover:bg-orange-600 text-white shadow-md hover:shadow-orange-500/25'
+                          : 'bg-emerald-700 hover:bg-emerald-800 text-white shadow-md hover:shadow-emerald-700/25'
                       }`}
                     >
                       <span>{language === 'kn' ? card.actionLabel_kn : card.actionLabel}</span>

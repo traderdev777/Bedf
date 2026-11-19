@@ -40,8 +40,8 @@ export default function InitiativesSection() {
         );
       case 'Under Development':
         return (
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/30">
-            <Clock className="w-3.5 h-3.5" />
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-orange-500/10 text-orange-600 dark:text-orange-400 border border-orange-500/30">
+            <Clock className="w-3.5 h-3.5 text-orange-500" />
             <span>{language === 'kn' ? status_kn : status}</span>
           </span>
         );

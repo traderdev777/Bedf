@@ -70,11 +70,11 @@ export default function FocusAreasPage() {
                 onClick={() => setSelectedSector(sector)}
                 className={`flex items-center gap-2 px-4 py-3 rounded-2xl text-xs font-bold whitespace-nowrap transition-all border ${
                   isSelected
-                    ? 'bg-navy-900 text-white dark:bg-gold-500 dark:text-navy-950 border-transparent shadow-md'
-                    : 'bg-white dark:bg-navy-900 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-navy-800 hover:border-gold-500/50'
+                    ? 'bg-navy-900 text-white dark:bg-gold-500 dark:text-navy-950 border-transparent shadow-md ring-2 ring-orange-500/30'
+                    : 'bg-white dark:bg-navy-900 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-navy-800 hover:border-orange-500/60 hover:text-orange-600 dark:hover:text-orange-400'
                 }`}
               >
-                <Icon className={`w-4 h-4 ${isSelected ? 'text-gold-400 dark:text-navy-950' : 'text-gray-500'}`} />
+                <Icon className={`w-4 h-4 ${isSelected ? 'text-orange-400 dark:text-navy-950' : 'text-gray-500'}`} />
                 <span>{language === 'kn' ? sector.title_kn : sector.title}</span>
               </button>
             );

@@ -5,10 +5,23 @@
 @tailwind utilities;
 
 :root {
-  --color-primary-navy: #0B2D5B;
+  /* Official BEDF Brand Palette Design Tokens */
+  --color-deep-orange: #D95B20;
+  --color-warm-ivory: #F7F8F4;
+  --color-deep-emerald: #145A45;
+  --color-midnight-navy: #142B45;
+  --color-champagne-gold: #C5A15B;
+  --color-soft-sage: #E5EDE6;
+  --color-charcoal: #263238;
+  --color-white: #FFFFFF;
+
+  /* Legacy & Semantic Mapping */
+  --color-primary-navy: #142B45;
   --color-deep-navy: #071A33;
-  --color-gold: #D4AF37;
-  --color-light-bg: #F6F8FB;
+  --color-gold: #C5A15B;
+  --color-orange: #D95B20;
+  --color-emerald: #145A45;
+  --color-light-bg: #F7F8F4;
   --color-dark-bg: #051124;
 
   /* Centralized Typography Design Tokens */
@@ -28,7 +41,7 @@ body {
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.625;
-  color: #172033;
+  color: #263238;
   background-color: #FFFFFF;
   transition: background-color 0.25s ease, color 0.25s ease;
 }

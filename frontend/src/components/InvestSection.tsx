@@ -134,7 +134,7 @@ export default function InvestSection() {
           <div className="flex items-center gap-3 w-full md:w-auto">
             <Link
               href="/contact?subject=Investment%20Enquiry"
-              className="w-full md:w-auto text-center px-6 py-3 rounded-full bg-navy-900 dark:bg-gold-500 text-white dark:text-navy-950 font-bold text-xs hover:bg-gold-600 dark:hover:bg-gold-400 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+              className="w-full md:w-auto text-center px-6 py-3 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs transition-all duration-200 shadow-md hover:shadow-lg hover:shadow-orange-500/25 hover:-translate-y-0.5"
             >
               <span>{t('Submit Investment Enquiry', 'ಹೂಡಿಕೆ ವಿಚಾರಣೆ ಸಲ್ಲಿಸಿ')}</span>
             </Link>

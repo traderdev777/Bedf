@@ -96,10 +96,10 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: -20, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.6, ease: PREMIUM_EASE }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-navy-50/90 dark:bg-white/10 backdrop-blur-md border border-navy-200/60 dark:border-white/15 text-xs font-semibold text-navy-900 dark:text-gray-200 mb-8 shadow-sm hover:border-gold-500/50 transition-colors cursor-default"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-navy-50/90 dark:bg-white/10 backdrop-blur-md border border-navy-200/60 dark:border-white/15 text-xs font-semibold text-navy-900 dark:text-gray-200 mb-8 shadow-sm hover:border-orange-500/50 transition-colors cursor-default"
         >
-          <span className="w-2 h-2 rounded-full bg-gold-500 animate-pulse" />
-          <span className="tracking-widest uppercase text-[11px] font-bold text-navy-900 dark:text-gold-400">
+          <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
+          <span className="tracking-widest uppercase text-[11px] font-bold text-navy-900 dark:text-gray-100">
             {t('Belagavi Economic Development Foundation', 'ಬೆಳಗಾವಿ ಆರ್ಥಿಕ ಅಭಿವೃದ್ಧಿ ಪ್ರತಿಷ್ಠಾನ')}
           </span>
           <span className="text-gray-400 hidden sm:inline">•</span>
@@ -141,12 +141,12 @@ export default function HeroSection() {
           </motion.h1>
         </div>
 
-        {/* Animated Expanding Gold Underline Accent */}
+        {/* Animated Expanding Deep Orange & Gold Accent Line */}
         <motion.div
           initial={{ scaleX: 0, opacity: 0 }}
           animate={{ scaleX: 1, opacity: 1 }}
           transition={{ delay: 0.9, duration: 0.8, ease: PREMIUM_EASE }}
-          className="w-28 h-1 bg-gradient-to-r from-gold-400 via-gold-500 to-amber-500 rounded-full my-7 shadow-sm shadow-gold-500/30"
+          className="w-28 h-1 bg-gradient-to-r from-orange-500 via-gold-500 to-amber-500 rounded-full my-7 shadow-sm shadow-orange-500/25"
         />
 
         {/* Supporting Narrative with Scroll-triggered Fade */}
@@ -171,10 +171,10 @@ export default function HeroSection() {
         >
           <Link
             href="/#map"
-            className="w-full sm:w-auto px-8 py-4 rounded-full bg-navy-900 text-white hover:bg-navy-850 dark:bg-white dark:text-navy-950 dark:hover:bg-gray-100 font-extrabold text-sm tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 group"
+            className="w-full sm:w-auto px-8 py-4 rounded-full bg-navy-900 text-white hover:bg-navy-850 dark:bg-white dark:text-navy-950 dark:hover:bg-gray-100 font-extrabold text-sm tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 group hover:border-orange-500"
           >
             <span>{t('Explore Belagavi Map', 'ಬೆಳಗಾವಿ ನಕ್ಷೆ ಅನ್ವೇಷಿಸಿ')}</span>
-            <Compass className="w-4 h-4 text-gold-400 dark:text-navy-900 group-hover:rotate-45 transition-transform duration-300" />
+            <Compass className="w-4 h-4 text-orange-500 group-hover:rotate-45 transition-transform duration-300" />
           </Link>
 
           <Link

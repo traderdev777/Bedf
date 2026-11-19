@@ -366,6 +366,9 @@ export default function BelagaviInteractiveMap() {
                   <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
                     <feDropShadow dx="0" dy="0" stdDeviation="5" floodColor="#D4AF37" floodOpacity="0.7"/>
                   </filter>
+                  <filter id="orangeGlow" x="-30%" y="-30%" width="160%" height="160%">
+                    <feDropShadow dx="0" dy="0" stdDeviation="6" floodColor="#D95B20" floodOpacity="0.85"/>
+                  </filter>
                 </defs>
 
                 {/* 1. Belagavi District Boundary Polygon (Accurate Geographic Silhouette) */}
@@ -464,11 +467,11 @@ export default function BelagaviInteractiveMap() {
                       onMouseLeave={() => setHoveredLocation(null)}
                       transform={`translate(${x}, ${y})`}
                     >
-                      {/* Outer pulsing ring for selected marker */}
+                      {/* Outer pulsing ring for selected marker in Deep Orange */}
                       {isSelected && (
                         <circle
-                          r="24"
-                          className="fill-none stroke-gold-400 stroke-2 animate-ping opacity-70"
+                          r="26"
+                          className="fill-none stroke-orange-500 stroke-2 animate-ping opacity-80"
                         />
                       )}
 
@@ -476,7 +479,7 @@ export default function BelagaviInteractiveMap() {
                       {isHovered && (
                         <circle
                           r="18"
-                          className="fill-gold-500/20 stroke-gold-400 stroke-1"
+                          className="fill-orange-500/20 stroke-orange-400 stroke-1"
                         />
                       )}
 
@@ -484,32 +487,36 @@ export default function BelagaviInteractiveMap() {
                         <>
                           <circle
                             r="11"
-                            className="fill-gold-500/20 stroke-gold-500 stroke-2 stroke-dashed animate-spin"
+                            className={`stroke-2 stroke-dashed animate-spin ${
+                              isSelected
+                                ? 'fill-orange-500/25 stroke-orange-500'
+                                : 'fill-gold-500/20 stroke-gold-500'
+                            }`}
                             style={{ animationDuration: '7s' }}
                           />
-                          <circle r="4.5" className="fill-gold-500" />
+                          <circle r="4.5" className={isSelected ? 'fill-orange-500' : 'fill-gold-500'} />
                         </>
                       ) : (
                         <>
                           <circle
-                            r={isSelected ? "11" : isHovered ? "10" : "8"}
+                            r={isSelected ? "12" : isHovered ? "10" : "8"}
                             className={`transition-all duration-200 ${
                               isSelected
-                                ? 'fill-gold-500 stroke-white dark:stroke-navy-950 stroke-2'
+                                ? 'fill-orange-500 stroke-white dark:stroke-navy-950 stroke-2'
                                 : 'fill-navy-600 dark:fill-blue-500 stroke-white dark:stroke-navy-900 stroke-2'
                             }`}
-                            filter={isSelected ? "url(#goldGlow)" : undefined}
+                            filter={isSelected ? "url(#orangeGlow)" : undefined}
                           />
-                          <circle r="3" className="fill-white" />
+                          <circle r="3.5" className="fill-white" />
                         </>
                       )}
 
-                      {/* Permanent compact title for selected marker */}
+                      {/* Permanent compact title for selected marker in Deep Orange */}
                       {isSelected && (
                         <text
-                          x="14"
+                          x="16"
                           y="4"
-                          className="fill-navy-950 dark:fill-white font-black text-[11px] drop-shadow-md select-none pointer-events-none"
+                          className="fill-orange-600 dark:fill-orange-400 font-extrabold text-[11px] drop-shadow-md select-none pointer-events-none"
                         >
                           {language === 'kn' ? loc.name_kn : loc.name}
                         </text>
@@ -531,23 +538,30 @@ export default function BelagaviInteractiveMap() {
                 transition={{ duration: 0.4, ease: PREMIUM_EASE }}
                 className="space-y-4"
               >
-                {/* Status & Category Tag */}
+                {/* Status & Category Tag with Deep Orange Active Marker Tag */}
                 <div className="flex items-center justify-between gap-2">
                   <span className="text-[10px] uppercase font-bold tracking-widest px-2.5 py-1 rounded-full bg-navy-50 dark:bg-navy-800 text-navy-800 dark:text-gray-200 border border-navy-100 dark:border-navy-700">
                     {selectedLocation.category} • {language === 'kn' ? selectedLocation.taluk_kn : selectedLocation.taluk}
                   </span>
 
-                  {selectedLocation.isProposed ? (
-                    <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-gold-500/10 text-gold-600 dark:text-gold-400 border border-gold-500/30 flex items-center gap-1">
-                      <Sparkles className="w-3 h-3" />
-                      <span>{t('Proposed Opportunity', 'ಪ್ರಸ್ತಾವಿತ ಅವಕಾಶ')}</span>
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-orange-500/10 text-orange-600 dark:text-orange-400 border border-orange-500/30 flex items-center gap-1 shadow-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-ping" />
+                      <span>{t('Active', 'ಆಯ್ಕೆ')}</span>
                     </span>
-                  ) : (
-                    <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 flex items-center gap-1">
-                      <CheckCircle2 className="w-3 h-3" />
-                      <span>{t('Operational Facility', 'ಕಾರ್ಯಾಚರಣೆಯಲ್ಲಿದೆ')}</span>
-                    </span>
-                  )}
+
+                    {selectedLocation.isProposed ? (
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-gold-500/10 text-gold-600 dark:text-gold-400 border border-gold-500/30 flex items-center gap-1">
+                        <Sparkles className="w-3 h-3" />
+                        <span>{t('Proposed', 'ಪ್ರಸ್ತಾವಿತ')}</span>
+                      </span>
+                    ) : (
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 flex items-center gap-1">
+                        <CheckCircle2 className="w-3 h-3" />
+                        <span>{t('Operational', 'ಸಕ್ರಿಯ')}</span>
+                      </span>
+                    )}
+                  </div>
                 </div>
 
                 {/* Authentic Landmark Photograph Preview (if available) */}
@@ -622,7 +636,7 @@ export default function BelagaviInteractiveMap() {
                 <div className="pt-2 flex flex-col gap-2">
                   <Link
                     href={`/contact?subject=${encodeURIComponent(`Enquiry for ${selectedLocation.name}`)}`}
-                    className="w-full flex items-center justify-center gap-1.5 py-2.5 rounded-full bg-navy-900 dark:bg-gold-500 text-white dark:text-navy-950 font-bold text-xs hover:bg-gold-600 dark:hover:bg-gold-400 transition-all duration-200 shadow-sm"
+                    className="w-full flex items-center justify-center gap-1.5 py-2.5 rounded-full bg-navy-900 dark:bg-gold-500 text-white dark:text-navy-950 font-bold text-xs hover:bg-orange-500 dark:hover:bg-orange-500 dark:hover:text-white transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-orange-500/20"
                   >
                     <span>{t('Submit Regional Enquiry', 'ಪ್ರಾದೇಶಿಕ ವಿಚಾರಣೆ ಸಲ್ಲಿಸಿ')}</span>
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -630,7 +644,7 @@ export default function BelagaviInteractiveMap() {
 
                   <Link
                     href="/focus-areas"
-                    className="w-full text-center py-2 text-xs font-semibold text-gray-600 dark:text-gray-400 hover:text-navy-900 dark:hover:text-white transition-colors"
+                    className="w-full text-center py-2 text-xs font-semibold text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
                   >
                     {t('View Sector Opportunities →', 'ವಲಯವಾರು ಅವಕಾಶಗಳನ್ನು ವೀಕ್ಷಿಸಿ →')}
                   </Link>
@@ -638,7 +652,7 @@ export default function BelagaviInteractiveMap() {
               </motion.div>
             ) : (
               <div className="h-full flex flex-col items-center justify-center text-center p-6 text-gray-400">
-                <MapPin className="w-8 h-8 text-gold-500 mb-2 opacity-50" />
+                <MapPin className="w-8 h-8 text-orange-500 mb-2 opacity-60" />
                 <p className="text-sm font-medium">{t('Select any marker on the map to inspect verified details', 'ಮಾಹಿತಿಯನ್ನು ವೀಕ್ಷಿಸಲು ನಕ್ಷೆಯಲ್ಲಿನ ತಾಣವನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ')}</p>
               </div>
             )}

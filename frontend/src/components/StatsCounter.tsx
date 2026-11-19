@@ -130,15 +130,15 @@ export default function StatsCounter() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.08, duration: 0.6, ease: PREMIUM_EASE }}
-                  className="h-full p-8 rounded-3xl bg-gray-50/80 dark:bg-navy-900/90 border border-gray-200/80 dark:border-navy-800 hover:border-gold-500/60 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col justify-between group"
+                  className="h-full p-8 rounded-3xl bg-gray-50/80 dark:bg-navy-900/90 border border-gray-200/80 dark:border-navy-800 hover:border-orange-500/50 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col justify-between group"
                 >
                   <div>
-                    {/* Top Tag & Icon */}
+                    {/* Top Tag & Icon with Deep Orange Hover Sheen */}
                     <div className="flex items-center justify-between mb-4">
                       <span className="font-display text-[10px] font-bold uppercase tracking-wider text-gold-600 dark:text-gold-400">
                         {stat.source}
                       </span>
-                      <div className="w-10 h-10 rounded-2xl bg-white dark:bg-navy-800 border border-gray-200 dark:border-navy-700 flex items-center justify-center text-gold-500 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-10 h-10 rounded-2xl bg-white dark:bg-navy-800 border border-gray-200 dark:border-navy-700 flex items-center justify-center text-navy-800 dark:text-gold-400 shadow-sm group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white group-hover:border-orange-500 transition-all duration-300">
                         <Icon className="w-4 h-4" />
                       </div>
                     </div>
@@ -164,11 +164,11 @@ export default function StatsCounter() {
                     </p>
                   </div>
 
-                  {/* Animated Visual Progress Bar Indicator */}
+                  {/* Animated Visual Progress Bar Indicator with Deep Orange & Emerald Gradients */}
                   <div className="mt-6 pt-4 border-t border-gray-200/60 dark:border-navy-800/80">
                     <div className="flex items-center justify-between text-[10px] font-bold text-gray-400 mb-1.5">
                       <span>{t('Regional Benchmark', 'ಪ್ರಾದೇಶಿಕ ಪ್ರಮಾಣ')}</span>
-                      <span className="text-gold-600 dark:text-gold-400">{stat.progressPercent}%</span>
+                      <span className={idx % 2 === 1 ? 'text-orange-600 dark:text-orange-400 font-extrabold' : 'text-emerald-700 dark:text-emerald-400 font-extrabold'}>{stat.progressPercent}%</span>
                     </div>
                     <div className="w-full h-1.5 rounded-full bg-gray-200/70 dark:bg-navy-800 overflow-hidden">
                       <motion.div
@@ -176,7 +176,11 @@ export default function StatsCounter() {
                         whileInView={{ width: `${stat.progressPercent}%` }}
                         viewport={{ once: true }}
                         transition={{ duration: 1.2, delay: 0.3 + idx * 0.1, ease: PREMIUM_EASE }}
-                        className="h-full bg-gradient-to-r from-gold-500 to-amber-500 rounded-full"
+                        className={`h-full rounded-full ${
+                          idx % 2 === 1
+                            ? 'bg-gradient-to-r from-orange-500 to-amber-500 shadow-sm shadow-orange-500/20'
+                            : 'bg-gradient-to-r from-emerald-600 to-teal-500 shadow-sm shadow-emerald-500/20'
+                        }`}
                       />
                     </div>
                   </div>

@@ -84,17 +84,32 @@ export default function SectorCards() {
                       : 'bg-white dark:bg-navy-900/80 border-gray-200/80 dark:border-navy-800 shadow-sm hover:shadow-xl'
                   }`}
                 >
-                  {/* Animated Gold Line at Top on Hover */}
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold-400 via-gold-500 to-amber-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                  {/* Animated Line at Top on Hover with Deep Orange for Tech & Gold for Heritage */}
+                  <div className={`absolute top-0 left-0 right-0 h-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ${
+                    sector.id === 'ai-technology' || sector.id === 'startups' || sector.id === 'robotics-automation'
+                      ? 'bg-gradient-to-r from-orange-500 via-orange-600 to-amber-600'
+                      : 'bg-gradient-to-r from-gold-400 via-gold-500 to-amber-600'
+                  }`} />
 
                   <div>
                     {/* Top Bar: Icon and Arrow */}
                     <div className="flex items-center justify-between mb-6">
-                      <div className="w-12 h-12 rounded-2xl bg-navy-50 dark:bg-navy-800 border border-navy-100 dark:border-navy-700 flex items-center justify-center text-navy-800 dark:text-gold-400 group-hover:bg-gold-500 group-hover:text-navy-950 transition-colors shadow-sm">
+                      <div className={`w-12 h-12 rounded-2xl bg-navy-50 dark:bg-navy-800 border border-navy-100 dark:border-navy-700 flex items-center justify-center text-navy-800 dark:text-gold-400 transition-colors shadow-sm ${
+                        sector.id === 'ai-technology' || sector.id === 'startups' || sector.id === 'robotics-automation'
+                          ? 'group-hover:bg-orange-500 group-hover:text-white group-hover:border-orange-500'
+                          : 'group-hover:bg-gold-500 group-hover:text-navy-950'
+                      }`}>
                         <Icon className="w-6 h-6" />
                       </div>
-                      <div className="w-8 h-8 rounded-full border border-gray-200 dark:border-navy-700 flex items-center justify-center text-gray-400 group-hover:text-gold-500 group-hover:border-gold-500 transition-colors">
-                        <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      <div className="flex items-center gap-2">
+                        {(sector.id === 'ai-technology' || sector.id === 'startups') && (
+                          <span className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-orange-500/10 text-orange-600 dark:text-orange-400 border border-orange-500/25">
+                            {t('Innovation Focus', 'ನಾವೀನ್ಯತೆ ಆದ್ಯತೆ')}
+                          </span>
+                        )}
+                        <div className="w-8 h-8 rounded-full border border-gray-200 dark:border-navy-700 flex items-center justify-center text-gray-400 group-hover:text-orange-500 group-hover:border-orange-500 transition-colors">
+                          <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                        </div>
                       </div>
                     </div>
 
@@ -201,14 +216,14 @@ export default function SectorCards() {
               <div className="mt-8 pt-6 border-t border-gray-100 dark:border-navy-800 flex flex-col sm:flex-row gap-3">
                 <Link
                   href={`/contact?subject=${encodeURIComponent(`Partnership in ${activeModalSector.title}`)}`}
-                  className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-navy-900 dark:bg-gold-500 text-white dark:text-navy-950 font-bold text-xs hover:bg-gold-600 dark:hover:bg-gold-400 transition-colors shadow-sm"
+                  className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-navy-900 dark:bg-gold-500 text-white dark:text-navy-950 font-bold text-xs hover:bg-orange-500 dark:hover:bg-orange-500 dark:hover:text-white transition-colors shadow-sm"
                 >
                   <span>{t('Inquire About This Sector', 'ಈ ವಲಯದಲ್ಲಿ ಪಾಲುದಾರಿಕೆಗೆ ಸಂಪರ್ಕಿಸಿ')}</span>
                   <ArrowUpRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/focus-areas"
-                  className="w-full flex items-center justify-center gap-2 py-3 rounded-full border border-gray-200 dark:border-navy-700 text-navy-900 dark:text-white font-bold text-xs hover:border-gold-500 transition-colors"
+                  className="w-full flex items-center justify-center gap-2 py-3 rounded-full border border-gray-200 dark:border-navy-700 text-navy-900 dark:text-white font-bold text-xs hover:border-orange-500 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
                 >
                   <span>{t('Read Full Sector Dossier', 'ಸಮಗ್ರ ವರದಿ ಓದಿ')}</span>
                 </Link>

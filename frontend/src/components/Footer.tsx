@@ -22,6 +22,7 @@ export default function Footer() {
     <footer className="bg-navy-950 text-white border-t border-navy-800/80 pt-16 pb-12 relative overflow-hidden font-sans">
       {/* Background Accent Gradients */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-navy-800/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-10 right-1/3 w-80 h-80 bg-orange-500/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-10 w-80 h-80 bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

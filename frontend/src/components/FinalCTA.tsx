@@ -32,8 +32,8 @@ export default function FinalCTA() {
           )}
         </h2>
 
-        {/* Gold accent line */}
-        <div className="w-20 h-1 bg-gradient-to-r from-gold-500 to-amber-500 rounded-full mx-auto my-6 shadow-sm shadow-gold-500/30" />
+        {/* Deep Orange and Gold Accent Line */}
+        <div className="w-24 h-1 bg-gradient-to-r from-orange-500 via-gold-500 to-amber-500 rounded-full mx-auto my-6 shadow-sm shadow-orange-500/20" />
 
         {/* Narrative */}
         <p className="text-base sm:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto font-normal leading-relaxed">
@@ -55,9 +55,9 @@ export default function FinalCTA() {
 
           <Link
             href="/contact"
-            className="w-full sm:w-auto px-8 py-4 rounded-full bg-navy-900 dark:bg-navy-800 border border-navy-800 dark:border-navy-700 hover:border-gold-500 text-white font-bold text-sm transition-all duration-300 hover:bg-navy-850 flex items-center justify-center gap-2 shadow-md"
+            className="w-full sm:w-auto px-8 py-4 rounded-full bg-navy-900 dark:bg-navy-800 border border-navy-800 dark:border-navy-700 hover:border-orange-500 text-white font-bold text-sm transition-all duration-300 hover:bg-navy-850 flex items-center justify-center gap-2 shadow-md group"
           >
-            <MessageSquare className="w-4 h-4 text-gold-400" />
+            <MessageSquare className="w-4 h-4 text-orange-400 group-hover:scale-110 transition-transform" />
             <span>{t('Contact Foundation Office', 'ಕಚೇರಿಯನ್ನು ಸಂಪರ್ಕಿಸಿ')}</span>
           </Link>
         </div>

@@ -184,7 +184,7 @@ function ContactFormInner() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full py-4 rounded-xl bg-gold-500 hover:bg-gold-400 text-navy-950 font-black text-sm transition-all duration-200 shadow-md flex items-center justify-center gap-2 disabled:opacity-50"
+              className="w-full py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-black text-sm transition-all duration-200 shadow-md hover:shadow-lg hover:shadow-orange-500/25 flex items-center justify-center gap-2 disabled:opacity-50"
             >
               {isSubmitting ? (
                 <span>{t('Submitting Message...', 'ಕಳುಹಿಸಲಾಗುತ್ತಿದೆ...')}</span>
